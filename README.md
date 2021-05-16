@@ -1,9 +1,5 @@
-# Bazz Seismic Website
+# Bass Seismic Website
 
-Web site for artist Bazz Seismic 
+## Work in damn progress
 
-This site is going to be build in NestJS for the back-end and Angular probably in the front. 
-
-## Status
-
-* Responsive design for background image on welcome page.
+**-> Last update:** home and gallery html/css design done
