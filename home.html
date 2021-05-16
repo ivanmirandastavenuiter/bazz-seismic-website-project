@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/465dd91009.js" crossorigin="anonymous"></script>
+    <title>Home</title>
+    <style>
+
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        div.dv-lvl-0.background-container {
+            position: relative;
+            z-index: -2;
+            height: 100vh;
+            width: 100vw;
+            min-width: 300px;
+            background-image: url('./imgs/concert.jpg');   
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 0;
+        }
+
+        div.dv-lvl-1.main-container {
+            z-index: 0;
+            position: relative;
+            width: 1535px;
+            min-width: 150px;
+            height: 100%;
+            margin: 0 auto;
+            padding: 0;
+            font-family: 'Bebas Neue', cursive;
+        }
+
+        div.dv-lvl-2.blur-layer {
+            position: absolute;
+            top: 0;
+            margin: 0 auto;
+            z-index: -1;
+            width: 40%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(9px);
+        }
+
+
+
+        p.par-lvl-3.bass-paragraph {
+            margin: 0;
+            padding: 0;
+            position: relative;
+            top: 123px;
+            left: 423px;
+            background-image: url('./imgs/concert.jpg');
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 7.5em;
+        }
+
+        p.par-lvl-3.seismic-paragraph {
+            top: 67px;
+            left: 617px;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            color: #fff;
+            font-size: 4.5em;
+        }
+
+        div.dv-lvl-2.sections-navbar {
+            width: 1535px;
+            top: 20px;
+            right: 0;
+            display: flex;
+            padding-top: 20px;  
+            justify-content: flex-end;
+        }
+
+        div.dv-lvl-2.footer-container {
+            width: 1535px;
+        }
+
+        div.dv-lvl-3.sections-container {
+            width: 600px;
+            color: #fff;
+        }
+
+        ul.ul-lvl-4.section-list {
+            display: flex;
+            justify-content: space-around;
+            list-style-type: none;
+        }
+
+        li.li-lvl-5.section-list-item {
+            letter-spacing: 7px;
+            font-size: .6em;
+        }
+
+        div.dv-lvl-3.social-media-container {
+            width: 200px;
+            color: #fff;
+        }
+
+        ul.ul-lvl-4.social-media-list {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            list-style-type: none;
+            padding-inline-start: 0;
+            margin-block-start: .7em;
+        }
+
+        li.li-lvl-5.social-media-item {
+            font-size: 1em;
+            margin: 0 20px;
+        }
+
+        div.dv-lvl-2.switch-section-buttons {
+            width: 200px;
+            position: absolute;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 1.3em;
+        }
+
+        div.dv-lvl-3.button-left,
+        div.dv-lvl-3.button-right {
+            background: rgba(230,230,230,.5);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin: .5em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.3em;
+            color: #fff;
+            box-shadow: 0 0 8px -2px #ceb40e;
+        }
+
+        div.dv-lvl-3.corner-square-img {
+            width: 100px;
+            height: 100px;
+            background: url('./imgs/smile.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            position: absolute;
+            bottom: 20px;
+            right: 30px;
+            box-sizing: border-box;
+            border: 5px solid #fff;
+        }
+
+        div.dv-lvl-3.corner-square-border.top {
+            height: 100px;
+            width: 1px;
+            background: #fff;
+            position: absolute;
+            right: 30px;
+            bottom: 140px;
+        }
+
+        div.dv-lvl-3.corner-square-border.left {
+            height: 1px;
+            width: 100px;
+            background: #fff;
+            position: absolute;
+            right: 150px;
+            bottom: 20px;
+        }
+
+        div.dv-lvl-3.corner-square-sign.top {
+            height: 10px;
+            width: 100px;
+            color: #fff;
+            position: absolute;
+            right: -16.5px;
+            bottom: 189px;
+            transform: rotate(270deg);
+            text-align: center;
+            letter-spacing: 7px;
+            font-size: .9em;
+        }
+
+        div.dv-lvl-3.corner-square-sign.left {
+            height: 10px;
+            width: 100px;
+            color: #fff;
+            position: absolute;
+            right: 150px;
+            bottom: 20px;
+            text-align: center;
+            letter-spacing: 7px;
+            font-size: .9em;
+        }
+        
+        div.dv-lvl-3.upper-left-corner-logo {
+            width: 400px;
+            height: 40px;
+            border: 1px solid #fff;
+            box-sizing: border-box;
+            display: flex;
+            position: absolute;
+            top: 20px;
+            left: 40px;
+        }
+
+        div.dv-lvl-4.left-logo {
+            width: 20%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #fff;
+            font-size: 1.3em;
+        }
+
+        div.dv-lvl-2.presentation-card {
+            width: 500px;
+            height: 300px;
+            border: 1px solid #fff;
+            box-sizing: border-box;
+            position: absolute;
+            bottom: 70px;
+            left: 70px;
+            display: flex;
+            margin-bottom: -1px;
+        }
+
+        div.dv-lvl-3.card-index {
+            width: 15%;
+            border-right: 1px solid #fff;
+            box-sizing: border-box;
+        }
+
+        div.dv-lvl-4.card-index-number {
+            height: 50px;
+            width: 100%;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.3em;
+        }
+
+        h1.he-lvl-4.card-header,
+        p.par-lvl-4.card-text {
+            padding: 0 20px 0 20px;
+        }
+
+        p.par-lvl-4.card-text {
+            text-align: justify;
+        }
+
+        div.dv-lvl-3.card-content {
+            width: 85%;
+        }
+
+        @media screen and (max-width: 1534px), (max-height: 700px) {
+
+            div.dv-lvl-0.background-container {
+                height: auto;
+                background-attachment: fixed;
+                float: left;
+                clear: both;
+            }
+
+            div.dv-lvl-1.main-container {
+                width: 100vw;
+                height: 100%;
+            }
+
+            div.dv-lvl-2.sections-navbar,
+            div.dv-lvl-2.footer-container {
+                width: 100%;
+            }
+
+            div.dv-lvl-2.blur-layer {
+                position: static;
+                padding: .1px;
+            }
+
+            div.dv-lvl-3.upper-left-corner-logo {
+                position: static;
+                margin: 20px auto;
+            }
+
+            p.par-lvl-3.bass-paragraph,
+            p.par-lvl-3.seismic-paragraph {
+                position: static;
+                text-align: center;
+            }
+
+            div.dv-lvl-2.sections-navbar {
+                position: static;
+                flex-flow: column;
+                margin: 0 auto;
+            }
+
+            div.dv-lvl-3.sections-container {
+                position: static;
+                margin: 0 auto;
+                width: 100%;
+            }
+
+            ul.ul-lvl-4.section-list {
+                flex-flow: column;
+                text-align: center;
+                padding-inline-start: 0;
+            }
+
+            li.li-lvl-5.section-list-item {
+                margin: 10px;
+                padding-left: 7px;
+            }
+
+            div.dv-lvl-3.social-media-container {
+                margin: 0 auto;
+            }
+
+            ul.ul-lvl-4.social-media-list {
+                flex-flow: column;
+                justify-content: center;
+            }
+ 
+            li.li-lvl-5.social-media-item {
+                margin: 10px auto;
+            }
+
+            div.dv-lvl-2.presentation-card {
+                position: static;
+                margin: 20px auto;
+            }
+
+            div.dv-lvl-3.corner-square-border.left,
+            div.dv-lvl-3.corner-square-sign.left,
+            div.dv-lvl-3.corner-square-img,
+            div.dv-lvl-3.corner-square-border.top,
+            div.dv-lvl-3.corner-square-sign.top {
+                position: static;
+                margin: 10px auto;
+            }
+
+            div.dv-lvl-3.corner-square-border.left {
+                margin-top: 20px;
+            }
+
+            div.dv-lvl-3.corner-square-sign.left {
+                position: relative;
+                left: 6px;
+            }
+
+            div.dv-lvl-3.corner-square-border.top {
+                height: 1px;
+                width: 100px;
+                margin-top: 35px;
+            }
+
+            div.dv-lvl-3.corner-square-sign.top {
+                transform: rotate(0deg);
+                position: relative;
+                right: -4.5px;
+                bottom: 19px;
+            }
+
+            div.dv-lvl-2.switch-section-buttons {
+                position: static;
+            }
+
+        }
+
+        @media screen and (max-width: 1300px) {
+            div.dv-lvl-2.blur-layer {
+                width: 60%;
+            }
+        }
+
+        @media screen and (max-width: 900px) {
+            div.dv-lvl-2.blur-layer {
+                width: 80%;
+            }
+        }
+
+        @media screen and (max-width: 700px) {
+
+            div.dv-lvl-2.presentation-card {
+                flex-flow: column;
+                width: 90%;
+                height: auto;
+            }
+
+            div.dv-lvl-3.card-index {
+                background: #fff;
+                display: flex;
+                margin: 0 auto;
+            }
+            div.dv-lvl-3.card-content {
+                margin: 0 auto;
+            }
+            h1.he-lvl-4.card-header {
+                text-align: center;
+            }
+        }
+
+        @media screen and (max-width: 476px) {
+            div.dv-lvl-3.upper-left-corner-logo {
+                width: 80%;
+            }
+            div.dv-lvl-3.card-index {
+                width: 20%;
+            }
+
+        }
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+
+    <div class="dv-lvl-0 background-container"> 
+
+        <div class="dv-lvl-1 main-container">
+
+            <!-- Section nav bar -->
+            <div class="dv-lvl-2 sections-navbar">
+
+                <!-- Upper left corner logo -->
+                <div class="dv-lvl-3 upper-left-corner-logo">
+                    <div class="dv-lvl-4 left-logo">BS</div>
+                </div>
+
+                <!-- Sections labels -->
+                <div class="dv-lvl-3 sections-container">
+
+                    <ul class="ul-lvl-4 section-list">
+
+                        <li class="li-lvl-5 section-list-item">HOME</li>
+                        <li class="li-lvl-5 section-list-item">BIO</li>
+                        <li class="li-lvl-5 section-list-item">MUSIC</li>
+                        <li class="li-lvl-5 section-list-item">CONTACT</li>
+    
+                    </ul>
+
+                </div>
+
+                <!-- Social media -->
+                <div class="dv-lvl-3 social-media-container">
+
+                    <ul class="ul-lvl-4 social-media-list">
+
+                        <li class="li-lvl-5 social-media-item">
+                            <i class="fab fa-twitter"></i>
+                        </li>
+                        <li class="li-lvl-5 social-media-item">
+                            <i class="fab fa-instagram"></i>
+                        </li>
+                        <li class="li-lvl-5 social-media-item">
+                            <i class="fab fa-facebook-f"></i>
+                        </li>
+    
+                    </ul>
+
+                </div>
+
+            </div>
+            
+
+            <!-- Blur layer -->
+            <div class="dv-lvl-2 blur-layer">                
+
+                <p class="par-lvl-3 bass-paragraph">BASS</p>
+
+                <p class="par-lvl-3 seismic-paragraph">SEISMIC</p>
+
+                <!-- Card -->
+                <div class="dv-lvl-2 presentation-card">
+                    <div class="dv-lvl-3 card-index">
+                        <div class="dv-lvl-4 card-index-number">1</div>
+                    </div>
+                    <div class="dv-lvl-3 card-content">
+                        <h1 class="he-lvl-4 card-header">A revolutionary artist</h1>
+                        <p class="par-lvl-4 card-text">
+                            With the artistic name of Bass Seismic, a new sound has been freshly introduced in the Malaga electronic music scene.
+                            He is remarkably known for his works as a producer, developing and creating several tracks for plenty of artists, occupying 
+                            a wide range of music genres. This is the start of a promise and he has come for more.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Footer container -->
+            <div class="dv-lvl-2 footer-container">
+
+                <!-- Photo square signs - left side -->
+                <div class="dv-lvl-3 corner-square-border left"></div>
+                <div class="dv-lvl-3 corner-square-sign left">BASS</div>
+
+                <!-- Photo corner square -->
+                <div class="dv-lvl-3 corner-square-img"></div>
+
+                <!-- Photo square signs - upper -->
+                <div class="dv-lvl-3 corner-square-border top"></div>
+                <div class="dv-lvl-3 corner-square-sign top">SEISMIC</div>
+
+                <!-- Switch section buttons -->
+                <div class="dv-lvl-2 switch-section-buttons">
+
+                    <div class="dv-lvl-3 button-left">
+                        <i class="fas fa-chevron-left"></i>
+                    </div>
+                    <div class="dv-lvl-3 button-right">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        
+       
+
+    </div>
+
+    
+</body>
+</html>

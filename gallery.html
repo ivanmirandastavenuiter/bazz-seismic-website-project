@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/465dd91009.js" crossorigin="anonymous"></script>
+    <title>Gallery</title>
+    <style>
+
+        body {
+            padding: 0;
+            margin: 0;
+
+        }
+
+        div.dv-lvl-0.background-container {
+            position: relative;
+            z-index: -2;
+            height: auto;
+            width: 100vw;
+            min-width: 250px;
+            background-image: url('./imgs/mixer.jpg');   
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 0;
+            float: left;
+            clear: both;
+        }
+
+        div.dv-lvl-1.main-container {
+            z-index: 0;
+            position: relative;
+            width: 1535px;
+            min-width: 150px;
+            height: 100%;
+            margin: 0 auto;
+            padding: 0;
+            font-family: 'Bebas Neue', cursive;
+        }
+
+        div.dv-lvl-2.sections-navbar {
+            width: 1535px;
+            top: 20px;
+            right: 0;
+            display: flex;
+            padding-top: 20px;  
+            justify-content: flex-end;
+        }
+
+        div.dv-lvl-2.gallery-main-container {
+            display: flex; 
+            width: 90%;
+        }
+
+        div.dv-lvl-3.gallery-sign {
+            width: 10%;
+            display: flex;
+            flex-flow: column-reverse;
+            margin: 50px auto;
+            /* position: absolute;
+            height: 20px;
+            margin: auto 0;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            transform: rotate(270deg);
+            z-index: 23; */
+        }
+
+        div.dv-lvl-4.sign-index-container {
+            height: 20%;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        span.sp-lvl-5.sign-index {
+            transform: rotate(270deg);
+            font-size: 3em;
+        }
+
+        p.par-lvl-4.sign-letters {
+            height: 80%;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            letter-spacing: 80px;
+            font-size: 3em;
+            transform: rotate(270deg);
+        }
+
+        div.dv-lvl-2.footer-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 1535px;
+            margin-bottom: 1.3em;
+        }
+
+        div.dv-lvl-3.sections-container {
+            width: 600px;
+            color: #fff;
+        }
+
+        ul.ul-lvl-4.section-list {
+            display: flex;
+            justify-content: space-around;
+            list-style-type: none;
+        }
+
+        li.li-lvl-5.section-list-item {
+            letter-spacing: 7px;
+            font-size: .6em;
+        }
+
+        div.dv-lvl-3.social-media-container {
+            width: 200px;
+            color: #fff;
+        }
+
+        ul.ul-lvl-4.social-media-list {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            list-style-type: none;
+            padding-inline-start: 0;
+            margin-block-start: .7em;
+        }
+
+        li.li-lvl-5.social-media-item {
+            font-size: 1em;
+            margin: 0 20px;
+        }
+
+        div.dv-lvl-2.switch-section-buttons {
+            width: 200px;
+            position: static;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        p.par-lvl-3.bass-letters,
+        p.par-lvl-3.seismic-letters {
+            color: #fff;
+            font-size: .7em;
+            letter-spacing: 7px;
+        }
+
+        div.dv-lvl-4.bass-sign-border {
+            width: 60px;
+            height: 1px;
+            background: #fff;
+            position: relative;
+            top: 18px;
+            right: 10px;
+        }
+
+        div.dv-lvl-4.seismic-sign-border {
+            width: 100px;
+            height: 1px;
+            background: #fff;
+            position: relative;
+            top: 18px;
+            right: 17px;
+        }
+
+
+        div.dv-lvl-3.button-left,
+        div.dv-lvl-3.button-right {
+            background: #f4eee4;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin: .5em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.3em;
+            color: #000;
+            box-shadow: 0 0 8px -2px #fff;
+        }
+        
+        div.dv-lvl-3.upper-left-corner-logo {
+            width: 400px;
+            height: 40px;
+            border: 1px solid #fff;
+            box-sizing: border-box;
+            display: flex;
+            position: absolute;
+            top: 20px;
+            left: 40px;
+        }
+
+        div.dv-lvl-4.left-logo {
+            width: 20%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #fff;
+            font-size: 1.3em;
+        }
+
+        div.dv-lvl-3.gallery-container {
+            width: 90%;
+            border: 1px solid #fff;
+            margin: 50px auto;
+            box-sizing: border-box;
+            padding-bottom: 8px;
+            backdrop-filter: blur(9px);
+        }
+
+        div.dv-lvl-4.gallery-row {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0 4px;
+            box-sizing: border-box;
+        }
+
+        div.dv-lvl-5.gallery-column {
+            flex: 25%;
+            max-width: 25%;
+            padding: 0 4px;
+            box-sizing: border-box;
+        }
+
+        img.img-lvl-6.gallery-image {
+            margin-top: 8px;
+            vertical-align: middle;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        @media screen and (max-width: 1534px), (max-height: 700px) {
+
+            div.dv-lvl-0.background-container {
+                height: auto;
+                background-attachment: fixed;
+                float: left;
+                clear: both;
+            }
+
+            div.dv-lvl-1.main-container {
+                width: 100vw;
+                height: 100%;
+            }
+
+            div.dv-lvl-2.sections-navbar,
+            div.dv-lvl-2.footer-container {
+                width: 100%;
+            }
+
+            div.dv-lvl-3.upper-left-corner-logo {
+                position: static;
+                margin: 20px auto;
+            }
+
+            div.dv-lvl-2.sections-navbar {
+                position: static;
+                flex-flow: column;
+                margin: 0 auto;
+            }
+
+            div.dv-lvl-3.sections-container {
+                position: static;
+                margin: 0 auto;
+                width: 100%;
+            }
+
+            ul.ul-lvl-4.section-list {
+                flex-flow: column;
+                text-align: center;
+                padding-inline-start: 0;
+            }
+
+            li.li-lvl-5.section-list-item {
+                margin: 10px;
+                padding-left: 7px;
+            }
+
+            div.dv-lvl-3.social-media-container {
+                margin: 0 auto;
+            }
+
+            ul.ul-lvl-4.social-media-list {
+                flex-flow: column;
+                justify-content: center;
+            }
+ 
+            li.li-lvl-5.social-media-item {
+                margin: 10px auto;
+            }
+
+            div.dv-lvl-2.switch-section-buttons {
+                position: static;
+            }
+
+        }
+
+        @media screen and (max-width: 1200px) {
+            div.dv-lvl-2.gallery-main-container {
+                display: block;
+                width: 100%;
+            }
+            div.dv-lvl-3.gallery-sign {
+                display: block;
+                width: 90%;
+                margin: 20px auto;
+            }
+            span.sp-lvl-5.sign-index {
+                transform: rotate(0deg);
+            }
+            p.par-lvl-4.sign-letters {
+                transform: rotate(0deg);
+                padding-left: 65px;
+            }
+            div.dv-lvl-3.gallery-container {
+                margin: 0 auto;
+            }
+        }
+
+        @media screen and (max-width: 1000px) {
+            div.dv-lvl-5.gallery-column {
+                flex: 50%;
+                max-width: 50%;
+            }
+            div.dv-lvl-2.footer-container {
+                flex-flow: column;
+            }
+            div.dv-lvl-4.bass-sign-border,
+            div.dv-lvl-4.seismic-sign-border {
+                right: 5px;
+            }
+            p.par-lvl-3.bass-letters,
+            p.par-lvl-3.seismic-letters {
+                text-align: center;
+            }
+
+        }
+
+        @media screen and (max-width: 700px) {
+            p.par-lvl-4.sign-letters {
+                letter-spacing: 40px;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            div.dv-lvl-5.gallery-column {
+                flex: 100%;
+                max-width: 100%;
+            }
+        }
+
+        @media screen and (max-width: 500px) {
+            p.par-lvl-4.sign-letters {
+                letter-spacing: 20px;
+                padding-left: 25px;
+            }
+        }
+
+        @media screen and (max-width: 476px) {
+            div.dv-lvl-3.upper-left-corner-logo {
+                width: 80%;
+            }
+        }
+
+        @media screen and (max-width: 350px) {
+            p.par-lvl-4.sign-letters {
+                letter-spacing: 0;
+                padding: 0;
+            }
+        }
+
+        @media screen and (min-height: 1200px) {
+            div.dv-lvl-0.background-container {
+                height: 100vh;
+            }
+
+            div.dv-lvl-2.switch-section-buttons {
+                position: absolute;
+                right: 0;
+                left: 0;
+                bottom: 0;
+                margin: auto;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="dv-lvl-0 background-container"> 
+
+        <div class="dv-lvl-1 main-container">
+
+            <!-- Section nav bar -->
+            <div class="dv-lvl-2 sections-navbar">
+
+                <!-- Upper left corner logo -->
+                <div class="dv-lvl-3 upper-left-corner-logo">
+                    <div class="dv-lvl-4 left-logo">BS</div>
+                </div>
+
+                <!-- Sections labels -->
+                <div class="dv-lvl-3 sections-container">
+
+                    <ul class="ul-lvl-4 section-list">
+
+                        <li class="li-lvl-5 section-list-item">HOME</li>
+                        <li class="li-lvl-5 section-list-item">BIO</li>
+                        <li class="li-lvl-5 section-list-item">MUSIC</li>
+                        <li class="li-lvl-5 section-list-item">CONTACT</li>
+    
+                    </ul>
+
+                </div>
+
+                <!-- Social media -->
+                <div class="dv-lvl-3 social-media-container">
+
+                    <ul class="ul-lvl-4 social-media-list">
+
+                        <li class="li-lvl-5 social-media-item">
+                            <i class="fab fa-twitter"></i>
+                        </li>
+                        <li class="li-lvl-5 social-media-item">
+                            <i class="fab fa-instagram"></i>
+                        </li>
+                        <li class="li-lvl-5 social-media-item">
+                            <i class="fab fa-facebook-f"></i>
+                        </li>
+    
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <!-- Gallery container -->
+            <div class="dv-lvl-2 gallery-main-container">
+
+                <div class="dv-lvl-3 gallery-sign">
+                    <div class="dv-lvl-4 sign-index-container"><span class="sp-lvl-5 sign-index">2</span></div>
+                    <p class="par-lvl-4 sign-letters">GALLERY</p>
+                </div>    
+
+
+                <!-- Photo section -->
+                <div class="dv-lvl-3 gallery-container">
+                    <div class="dv-lvl-4 gallery-row">
+                        <div class="dv-lvl-5 gallery-column">
+                            <img src="./imgs/img-1.jpg" alt="bass-photo-1" class="img-lvl-6 gallery-image">
+                            <img src="./imgs/img-2.jpg" alt="bass-photo-2" class="img-lvl-6 gallery-image">
+                            <img src="./imgs/img-15.jpg" alt="bass-photo-4" class="img-lvl-6 gallery-image">
+                        </div>
+                        <div class="dv-lvl-5 gallery-column">
+                            <img src="./imgs/img-5.jpg" alt="bass-photo-5" class="img-lvl-6 gallery-image">
+                            <img src="./imgs/img-6.jpg" alt="bass-photo-6" class="img-lvl-6 gallery-image">
+                            <img src="./imgs/img-7.jpg" alt="bass-photo-7" class="img-lvl-6 gallery-image">
+                            <img src="./imgs/img-12.jpg" alt="bass-photo-8" class="img-lvl-6 gallery-image">
+                        </div>
+                        <div class="dv-lvl-5 gallery-column">
+                            <img src="./imgs/img-9.jpg" alt="bass-photo-9" class="img-lvl-6 gallery-image">
+                            <img src="./imgs/img-10.jpg" alt="bass-photo-10" class="img-lvl-6 gallery-image">
+                            <img src="./imgs/img-11.jpg" alt="bass-photo-11" class="img-lvl-6 gallery-image">
+                            <img src="./imgs/img-8.jpg" alt="bass-photo-12" class="img-lvl-6 gallery-image">
+                        </div>
+                        <div class="dv-lvl-5 gallery-column">
+                            <img src="./imgs/img-13.jpg" alt="bass-photo-13" class="img-lvl-6 gallery-image">
+                            <img src="./imgs/img-14.jpg" alt="bass-photo-14" class="img-lvl-6 gallery-image">
+                            <img src="./imgs/img-4.jpg" alt="bass-photo-15" class="img-lvl-6 gallery-image">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+
+            <!-- Footer container -->
+            <div class="dv-lvl-2 footer-container">
+
+                <!-- Bass decoration -->
+                <div class="dv-lvl-2 bass-sign-container">
+                    <div class="dv-lvl-4 bass-sign-border"></div>
+                    <p class="par-lvl-3 bass-letters">BASS</p>
+                </div>
+
+                <!-- Switch section buttons -->
+                <div class="dv-lvl-2 switch-section-buttons">
+
+                    <div class="dv-lvl-3 button-left">
+                        <i class="fas fa-chevron-left"></i>
+                    </div>
+                    <div class="dv-lvl-3 button-right">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+
+                </div>
+
+                <!-- Bass seismic -->
+                <div class="dv-lvl-2 seismic-sign-container">
+                    <div class="dv-lvl-4 seismic-sign-border"></div>
+                    <p class="par-lvl-3 seismic-letters">SEISMIC</p>
+                </div>
+
+            </div>
+
+        </div>
+
+        
+       
+
+    </div>
+
+    
+</body>
+</html>
