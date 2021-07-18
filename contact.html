@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cairo:wght@200&family=Dancing+Script&family=Raleway:wght@100&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/465dd91009.js" crossorigin="anonymous"></script>
+    <title>Contact</title>
+    <style>
+
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        div.dv-lvl-0.background-container {
+            position: relative;
+            z-index: -2;
+            height: auto;
+            width: 100vw;
+            min-width: 300px;
+            background: url('./imgs/blonde-vinil.jpg');
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 0;
+            float: left;
+            clear: both;
+        }
+
+        div.dv-lvl-1.main-container {
+            z-index: 0;
+            position: relative;
+            width: 1535px;
+            min-width: 150px;
+            height: 100%;
+            margin: 0 auto;
+            padding: 0;
+            font-family: 'Bebas Neue', cursive;
+        }
+
+        div.dv-lvl-2.sections-navbar {
+            width: 1535px;
+            top: 20px;
+            right: 0;
+            display: flex;
+            padding-top: 20px;  
+            justify-content: flex-end;
+        }
+
+        div.dv-lvl-2.footer-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 1535px;
+            margin: 1.3em 0;
+        }
+
+        p.par-lvl-3.bass-letters,
+        p.par-lvl-3.seismic-letters {
+            color: #fff;
+            font-size: .7em;
+            letter-spacing: 7px;
+        }
+
+        div.dv-lvl-2.bass-sign-container {
+            width: 100px;
+        }
+
+        div.dv-lvl-4.bass-sign-border {
+            width: 58%;
+            height: 1px;
+            background: #fff;
+            position: relative;
+            top: 18px;
+            right: 10px;
+        }
+
+        div.dv-lvl-4.seismic-sign-border {
+            width: 100px;
+            height: 1px;
+            background: #fff;
+            position: relative;
+            top: 18px;
+            right: 17px;
+        }
+
+        div.dv-lvl-3.sections-container {
+            width: 600px;
+            color: #fff;
+        }
+
+        ul.ul-lvl-4.section-list {
+            display: flex;
+            justify-content: space-around;
+            list-style-type: none;
+        }
+
+        li.li-lvl-5.section-list-item {
+            letter-spacing: 7px;
+            font-size: .6em;
+        }
+
+        div.dv-lvl-3.social-media-container {
+            width: 200px;
+            color: #fff;
+        }
+
+        ul.ul-lvl-4.social-media-list {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            list-style-type: none;
+            padding-inline-start: 0;
+            margin-block-start: .7em;
+        }
+
+        li.li-lvl-5.social-media-item {
+            font-size: 1em;
+            margin: 0 20px;
+        }
+
+        div.dv-lvl-2.contact-container {
+            width: 70%;
+            min-width: 383px;
+            border: 1px solid #000;
+            position: relative;
+            margin: 0 auto;
+            background: #fff;
+            z-index: 0;
+        }
+
+        div.dv-lvl-2.contact-sign {
+            width: 70%;
+            display: flex;
+            justify-content: space-between;
+            margin: 50px auto 0 auto;
+        }
+
+        div.dv-lvl-3.sign-index-container {
+            width: 20%;
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        span.sp-lvl-4.sign-index {
+            color: #fff;
+            font-size: 1.3em;
+        }
+
+        p.par-lvl-3.sign-letters {
+            letter-spacing: 10px;
+            font-size: 1.3em;
+            margin: 0;
+            padding: 0;
+            padding-left: 2em;
+            color: #fff;
+        }
+
+        div.dv-lvl-3.contact-square-container {
+            width: 600px;
+            margin: 0 auto;
+            height: 757px;
+        }
+
+        div.dv-lvl-4.contact-square-one {
+            position: relative;
+            width: 85%;
+            margin: 0 auto;
+            top: 100px;
+            left: 100px;
+        }
+
+        div.dv-lvl-4.contact-square-one img {
+            width: 100%;
+        }   
+
+        div.dv-lvl-4.contact-square-two {
+            position: relative;
+            bottom: 270px;
+            right: 45px;
+            width: 510px;
+            height: 510px;
+            background: rgb(197, 197, 197);
+            margin: 0 auto;
+            z-index: -1;
+        }
+
+        div.dv-lvl-5.inner-square-deco {
+            width: 25px;
+            height: 25px;
+            background:rgb(61, 61, 61);
+        }
+
+        div.dv-lvl-5.main-text-container {
+            position: absolute;
+            bottom: 10px;
+            padding-left: 25px;
+            letter-spacing: 13px;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        p.par-lvl-6.bass-title {
+            font-size: 2.5em;
+        }
+
+        p.par-lvl-6.bass-title {
+            margin: 0 0 10px 0;
+        }
+
+        p.par-lvl-6.bass-profession-title {
+            margin: 15px 0 20px 0;
+        }
+
+        span.sp-lvl-7.bass-name {
+            font-weight: bold;
+        }
+
+        span.sp-lvl-7.bass-surname {
+            font-weight: lighter;
+        }
+
+        div.dv-lvl-3.greeting-container {
+            width: 600px;
+            margin: 0 auto;
+        }
+
+        p.par-lvl-4.greeting-title {
+            font-size: 2em;
+            font-family: 'Dancing Script', cursive;
+            margin: 13px 0 0 0;
+        }
+
+        p.par-lvl-4.greeting-message {
+            width: 510px;
+            text-align: justify;
+            margin: 16px 0 16px 0;
+        }
+
+        div.dv-lvl-3.contact-details-container {
+            width: 600px;
+            margin: 70px auto 160px auto;
+            font-family: 'Cairo', sans-serif;
+            font-size: .9em;
+        }
+
+        p.par-lvl-4.bass-address {
+            width: 510px;
+            margin: 0;
+        }
+
+        p.par-lvl-4.bass-address.bottom {
+            margin: -7px 0 20px 0;
+        }
+
+        div.dv-lvl-5.contact-detail-icon-row {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        div.dv-lvl-6.contact-detail-icon-item {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        div.dv-lvl-6.contact-detail-icon-item.right {
+            width: 175px;
+        }
+
+        div.dv-lvl-6.contact-detail-icon-item p {
+            margin: 0 0 0 15px;
+        }
+
+        div.dv-lvl-4.contact-details-icons {
+            width: 510px;
+        }
+
+
+        div.dv-lvl-2.switch-section-buttons {
+            width: 200px;
+            position: static;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        div.dv-lvl-3.button-left,
+        div.dv-lvl-3.button-right {
+            background: #fff;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin: .5em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.3em;
+            color: #000;
+            box-shadow: 0 0 8px -2px #fff;
+        }
+        
+        div.dv-lvl-3.upper-left-corner-logo {
+            width: 400px;
+            height: 40px;
+            border: 1px solid #000;
+            box-sizing: border-box;
+            display: flex;
+            position: absolute;
+            top: 20px;
+            left: 40px;
+        }
+
+        div.dv-lvl-4.left-logo {
+            width: 20%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #000;
+            font-size: 1.3em;
+            color: #fff;
+        }
+
+        @media screen and (max-width: 1200px) {
+            div.dv-lvl-4.contact-square-one {
+                left: 0;
+            }
+
+            div.dv-lvl-4.contact-square-two {
+                right: 0;
+            }
+            div.dv-lvl-5.inner-square-deco {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+            }
+            div.dv-lvl-3.greeting-container,
+            div.dv-lvl-3.contact-details-container {
+                width: 510px;
+            }
+
+        }
+
+        @media screen and (max-width: 900px) {
+            div.dv-lvl-3.contact-square-container,
+            div.dv-lvl-4.contact-square-two {
+                width: 85%;
+            }
+            div.dv-lvl-3.greeting-container,
+            p.par-lvl-4.greeting-title,
+            p.par-lvl-4.greeting-message {
+                width: 85%;
+            }
+            p.par-lvl-4.greeting-title {
+                margin: 13px auto 0 auto;
+            }
+            p.par-lvl-4.greeting-message {
+                margin: 16px auto;
+            }
+            div.dv-lvl-3.contact-details-container,
+            p.par-lvl-4.bass-address.top,
+            p.par-lvl-4.bass-address.bottom {
+                width: 85%;
+            }
+            p.par-lvl-4.bass-address.top {
+                margin: 0 auto;
+            }
+            p.par-lvl-4.bass-address.bottom {
+                margin: -7px auto 20px auto;
+            }
+            div.dv-lvl-4.contact-details-icons {
+                width: 85%;
+                margin: 0 auto;
+            }
+            div.dv-lvl-3.contact-square-container {
+                height: 708px;
+            }
+        }
+
+        @media screen and (max-width: 880px) {
+            div.dv-lvl-4.contact-square-two {
+                bottom: 240px;
+            }
+            div.dv-lvl-3.contact-square-container {
+                height: 730px;
+            }
+        }
+
+        @media screen and (max-width: 860px) {
+            div.dv-lvl-3.contact-square-container {
+                height: 715px;
+            }
+        }
+
+        @media screen and (max-width: 840px) {
+            div.dv-lvl-3.contact-square-container {
+                height: 700px;
+            }
+        }
+
+        @media screen and (max-width: 820px) {
+            div.dv-lvl-3.contact-square-container {
+                height: 690px;
+            }
+        }
+
+        @media screen and (max-width: 800px) {
+            div.dv-lvl-3.contact-square-container {
+                height: 680px;
+            }
+        }
+
+        @media screen and (max-width: 780px) {
+            div.dv-lvl-3.contact-square-container {
+                height: 670px;
+            }
+        }
+
+        @media screen and (max-width: 760px) {
+            div.dv-lvl-3.contact-square-container {
+                height: 660px;
+            }
+            div.dv-lvl-5.contact-detail-icon-row {
+                flex-flow: column;
+            }
+            div.dv-lvl-6.contact-detail-icon-item {
+                justify-content: center;
+            }
+            div.dv-lvl-6.contact-detail-icon-item.right {
+                width: 100%;
+            }
+            p.par-lvl-4.bass-address {
+                text-align: center;
+            }
+        }
+
+        @media screen and (max-width: 740px) {
+            div.dv-lvl-3.contact-square-container {
+                height: 650px;
+            }
+        }
+
+        @media screen and (max-width: 720px) {
+            div.dv-lvl-3.contact-square-container {
+                height: 640px;
+            }
+        }
+
+        @media screen and (max-width: 700px) {
+            div.dv-lvl-3.contact-square-container {
+                height: 630px;
+            }
+        }
+
+        @media screen and (max-width: 680px) {
+            div.dv-lvl-3.contact-square-container {
+                height: 620px;
+            }
+        }
+
+        @media screen and (max-width: 660px) {
+            div.dv-lvl-3.contact-square-container {
+                height: 610px;
+            }
+            div.dv-lvl-4.contact-square-two {
+                bottom: 235px;
+            }
+        }
+
+        @media screen and (max-width: 650px) {
+            div.dv-lvl-4.contact-square-two {
+                bottom: 230px;
+            }
+        }
+
+        @media screen and (max-width: 640px) {
+            div.dv-lvl-4.contact-square-two {
+                bottom: 225px;
+                height: 500px;
+            }
+        }
+
+        @media screen and (max-width: 630px) {
+            div.dv-lvl-4.contact-square-two {
+                bottom: 220px;
+                height: 495px;
+            }
+        }
+
+        @media screen and (max-width: 630px) {
+            div.dv-lvl-4.contact-square-two {
+                bottom: 215px;
+                height: 490px;
+            }
+            div.dv-lvl-3.contact-square-container {
+                height: 600px;
+            }
+        }
+
+        @media screen and (max-width: 610px) {
+            div.dv-lvl-4.contact-square-two {
+                bottom: 210px;
+                height: 485px;
+            }
+            div.dv-lvl-3.contact-square-container {
+                height: 590px;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            div.dv-lvl-4.contact-square-two {
+                bottom: 205px;
+                height: 480px;
+            }
+        }
+
+        @media screen and (max-width: 590px) {
+            div.dv-lvl-4.contact-square-two {
+                bottom: 200px;
+                height: 475px;
+            }
+        }
+
+        @media screen and (max-width: 580px) {
+            div.dv-lvl-4.contact-square-two {
+                bottom: 195px;
+                height: 470px;
+            }
+            div.dv-lvl-3.contact-square-container {
+                height: 580px;
+            }
+        }
+
+        @media screen and (max-width: 570px) {
+            div.dv-lvl-4.contact-square-two {
+                bottom: 190px;
+                height: 465px;
+            }
+            div.dv-lvl-3.contact-square-container {
+                height: 570px;
+            }
+        }
+
+        @media screen and (max-width: 560px) {
+            div.dv-lvl-4.contact-square-two {
+                bottom: 185px;
+                height: 460px;
+            }
+            div.dv-lvl-3.contact-square-container {
+                height: 560px;
+            }
+        }
+
+        @media screen and (max-width: 550px) {
+            div.dv-lvl-4.contact-square-two {
+                bottom: 180px;
+                height: 455px;
+            }
+        }
+
+        @media screen and (max-width: 540px) {
+            div.dv-lvl-4.contact-square-two {
+                bottom: 175px;
+                height: 450px;
+            }
+            div.dv-lvl-3.contact-square-container {
+                height: 555px;
+            }
+            div.dv-lvl-5.main-text-container {
+                letter-spacing: 6px;
+            }
+        }
+
+        @media screen and (max-width: 530px) {
+            div.dv-lvl-4.contact-square-two {
+                bottom: 170px;
+                height: 445px;
+            }
+        }
+
+        @media screen and (max-width: 520px) {
+            div.dv-lvl-4.contact-square-two {
+                bottom: 165px;
+                height: 440px;
+            }
+        }
+
+        @media screen and (max-width: 510px) {
+            div.dv-lvl-4.contact-square-two {
+                bottom: 160px;
+                height: 435px;
+            }
+        }
+
+        @media screen and (max-width: 500px) {
+            div.dv-lvl-4.contact-square-two {
+                bottom: 155px;
+                height: 430px;
+            }
+        }
+
+        @media screen and (max-width: 490px) {
+            div.dv-lvl-4.contact-square-two {
+                bottom: 150px;
+                height: 425px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            div.dv-lvl-4.contact-square-two {
+                bottom: 145px;
+                height: 420px;
+            }
+        }
+        
+        @media screen and (max-width: 470px) {
+            div.dv-lvl-4.contact-square-two {
+                bottom: 140px;
+                height: 415px;
+            }
+        }
+
+        @media screen and (max-width: 460px) {
+            div.dv-lvl-4.contact-square-two {
+                bottom: 135px;
+                height: 410px;
+            }
+        }
+
+        @media screen and (max-width: 450px) {
+            div.dv-lvl-4.contact-square-two {
+                bottom: 130px;
+                height: 405px;
+            }
+            div.dv-lvl-5.main-text-container {
+                letter-spacing: 2px;
+            }
+        }
+
+        @media screen and (max-width: 440px) {
+            div.dv-lvl-4.contact-square-two {
+                bottom: 125px;
+                height: 400px;
+            }
+        }
+
+        @media screen and (max-width: 430px) {
+            div.dv-lvl-4.contact-square-two {
+                bottom: 115px;
+                height: 395px;
+            }
+        }
+
+        @media screen and (max-width: 420px) {
+            div.dv-lvl-4.contact-square-two {
+                bottom: 110px;
+                height: 390px;
+            }
+            div.dv-lvl-3.contact-square-container {
+                height: 565px;
+            }
+        }
+
+        @media screen and (max-width: 410px) {
+            div.dv-lvl-4.contact-square-two {
+                bottom: 105px;
+                height: 385px;
+            }
+            div.dv-lvl-5.main-text-container {
+                letter-spacing: 0;
+            }
+        }
+
+        @media screen and (max-width: 400px) {
+            div.dv-lvl-4.contact-square-two {
+                bottom: 100px;
+                height: 380px;
+            }
+        }
+
+        @media screen and (max-width: 390px) {
+            div.dv-lvl-4.contact-square-two {
+                bottom: 95px;
+                height: 375px;
+            }
+        }
+
+        @media screen and (max-width: 1534px), (max-height: 700px) {
+
+            div.dv-lvl-0.background-container {
+                height: auto;
+                background-attachment: fixed;
+                float: left;
+                clear: both;
+            }
+
+            div.dv-lvl-1.main-container {
+                width: 100vw;
+                height: 100%;
+            }
+
+            div.dv-lvl-2.sections-navbar,
+            div.dv-lvl-2.footer-container {
+                width: 100%;
+            }
+
+            div.dv-lvl-3.upper-left-corner-logo {
+                position: static;
+                margin: 20px auto;
+            }
+
+            div.dv-lvl-2.sections-navbar {
+                position: static;
+                flex-flow: column;
+                margin: 0 auto;
+            }
+
+            div.dv-lvl-3.sections-container {
+                position: static;
+                margin: 0 auto;
+                width: 100%;
+            }
+
+            ul.ul-lvl-4.section-list {
+                flex-flow: column;
+                text-align: center;
+                padding-inline-start: 0;
+            }
+
+            li.li-lvl-5.section-list-item {
+                margin: 10px;
+                padding-left: 7px;
+            }
+
+            div.dv-lvl-3.social-media-container {
+                margin: 0 auto;
+            }
+
+            ul.ul-lvl-4.social-media-list {
+                flex-flow: column;
+                justify-content: center;
+            }
+ 
+            li.li-lvl-5.social-media-item {
+                margin: 10px auto;
+            }
+
+            div.dv-lvl-2.switch-section-buttons {
+                position: static;
+            }
+
+        }
+
+        @media screen and (max-width: 1000px) {
+            div.dv-lvl-2.footer-container {
+                flex-flow: column;
+            }
+            div.dv-lvl-4.bass-sign-border,
+            div.dv-lvl-4.seismic-sign-border {
+                right: 5px;
+            }
+            p.par-lvl-3.bass-letters,
+            p.par-lvl-3.seismic-letters {
+                text-align: center;
+            }
+
+        }
+
+        @media screen and (max-width: 476px) {
+            div.dv-lvl-3.upper-left-corner-logo {
+                width: 80%;
+            }
+
+        }
+
+        @media screen and (min-height: 1500px) {
+
+            div.dv-lvl-0.background-container {
+                height: 100vh;
+            }
+
+            div.dv-lvl-2.switch-section-buttons {
+                position: absolute;
+                right: 0;
+                left: 0;
+                bottom: 0;
+                margin: auto;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="dv-lvl-0 background-container"> 
+
+        <div class="dv-lvl-1 main-container">
+
+            <!-- Section nav bar -->
+            <div class="dv-lvl-2 sections-navbar">
+
+                <!-- Upper left corner logo -->
+                <div class="dv-lvl-3 upper-left-corner-logo">
+                    <div class="dv-lvl-4 left-logo">BS</div>
+                </div>
+
+                <!-- Sections labels -->
+                <div class="dv-lvl-3 sections-container">
+
+                    <ul class="ul-lvl-4 section-list">
+
+                        <li class="li-lvl-5 section-list-item">HOME</li>
+                        <li class="li-lvl-5 section-list-item">BIO</li>
+                        <li class="li-lvl-5 section-list-item">MUSIC</li>
+                        <li class="li-lvl-5 section-list-item">CONTACT</li>
+    
+                    </ul>
+
+                </div>
+
+                <!-- Social media -->
+                <div class="dv-lvl-3 social-media-container">
+
+                    <ul class="ul-lvl-4 social-media-list">
+
+                        <li class="li-lvl-5 social-media-item">
+                            <i class="fab fa-twitter"></i>
+                        </li>
+                        <li class="li-lvl-5 social-media-item">
+                            <i class="fab fa-instagram"></i>
+                        </li>
+                        <li class="li-lvl-5 social-media-item">
+                            <i class="fab fa-facebook-f"></i>
+                        </li>
+    
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <!-- Contact sign -->
+            <div class="dv-lvl-2 contact-sign">
+                <div class="dv-lvl-3 sign-index-container"><span class="sp-lvl-4 sign-index">3</span></div>
+                <p class="par-lvl-3 sign-letters">CONTACT</p>
+            </div>    
+
+            <!-- Contact details section -->
+            <div class="dv-lvl-2 contact-container">
+
+                <div class="dv-lvl-3 contact-square-container">
+
+                    <div class="dv-lvl-4 contact-square-one">
+                        <img src="./imgs/nightcity.jpg" alt="">
+                    </div>
+
+                    <div class="dv-lvl-4 contact-square-two">
+                        <div class="dv-lvl-5 inner-square-deco"></div>
+                        <div class="dv-lvl-5 main-text-container">
+                            <p class="par-lvl-6 bass-title">
+                                <span class="sp-lvl-7 bass-name">BASS</span>
+                                <span class="sp-lvl-7 bass-surname">SEISMIC</span>
+                            </p>
+                            <p class="par-lvl-6 bass-profession-title">MUSICIAN</p>
+                        </div>
+                    </div>
+            
+                </div>
+
+                <div class="dv-lvl-3 greeting-container">
+                    <p class="par-lvl-4 greeting-title">Hello</p>
+                    <p class="par-lvl-4 greeting-message">
+                        Hello, I'm Bass Seismic. I've been dedicating to music since adolescence, 
+                        and been involved into music since longer. Starting firstly with punk rock genre as a reference, I turned my 
+                        mind towards a wide range of styles, being one of them electronic music in its whole general concept. And yes,
+                        of course, I make music ;)
+                    </p>
+                </div>
+
+                <div class="dv-lvl-3 contact-details-container">
+                    <p class="par-lvl-4 bass-address top">Gálica X / Málaga</p>
+                    <p class="par-lvl-4 bass-address bottom">Churriana state</p>
+
+                    <div class="dv-lvl-4 contact-details-icons">
+
+                        <div class="dv-lvl-5 contact-detail-icon-row">
+                            <div class="dv-lvl-6 contact-detail-icon-item">
+                                <span class="sp-lvl-7 contact-detail-icon">
+                                    <i class="fas fa-comment-dots"></i>
+                                </span>
+                                <p class="par-lvl-7 contact-detail-item-text">+0034600600600</p>
+                            </div>
+                            <div class="dv-lvl-6 contact-detail-icon-item right">
+                                <span class="sp-lvl-7 contact-detail-icon">
+                                    <i class="fab fa-instagram-square"></i>
+                                </span>
+                                <p class="par-lvl-7 contact-detail-item-text">instagram/bass-seismic</p>
+                            </div>
+                        </div>
+
+                        <div class="dv-lvl-5 contact-detail-icon-row">
+                            <div class="dv-lvl-6 contact-detail-icon-item">
+                                <span class="sp-lvl-7 contact-detail-icon">
+                                    <i class="fas fa-globe"></i>
+                                </span>
+                                <p class="par-lvl-7 contact-detail-item-text">www.bass-seismic.com</p>
+                            </div>
+                            <div class="dv-lvl-6 contact-detail-icon-item right">
+                                <span class="sp-lvl-7 contact-detail-icon">
+                                    <i class="fab fa-facebook-f"></i>
+                                </span>
+                                <p class="par-lvl-7 contact-detail-item-text">facebook/bass-seismic</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                
+
+
+            </div>
+
+            <!-- Footer container -->
+            <div class="dv-lvl-2 footer-container">
+
+                <!-- Bass decoration -->
+                <div class="dv-lvl-2 bass-sign-container">
+                    <div class="dv-lvl-4 bass-sign-border"></div>
+                    <p class="par-lvl-3 bass-letters">BASS</p>
+                </div>
+
+                <!-- Switch section buttons -->
+                <div class="dv-lvl-2 switch-section-buttons">
+
+                    <div class="dv-lvl-3 button-left">
+                        <i class="fas fa-chevron-left"></i>
+                    </div>
+                    <div class="dv-lvl-3 button-right">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+
+                </div>
+
+                <!-- Bass seismic -->
+                <div class="dv-lvl-2 seismic-sign-container">
+                    <div class="dv-lvl-4 seismic-sign-border"></div>
+                    <p class="par-lvl-3 seismic-letters">SEISMIC</p>
+                </div>
+
+            </div>
+
+        </div>
+
+        
+       
+
+    </div>
+
+    
+</body>
+</html>

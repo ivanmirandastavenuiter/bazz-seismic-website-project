@@ -5,9 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cairo:wght@200&family=Dancing+Script&family=Raleway:wght@100&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/465dd91009.js" crossorigin="anonymous"></script>
-    <title>Gallery</title>
+    <title>Music</title>
     <style>
 
         body {
@@ -20,11 +21,12 @@
             z-index: -2;
             height: auto;
             width: 100vw;
-            min-width: 250px;
-            background-image: url('./imgs/mixer.jpg');   
+            min-width: 300px;
+            background: linear-gradient(135deg, #fff 0%, #b7b7b7 63%);
+            /* background: url('./imgs/blonde-vinil.jpg');
             background-position: 50% 50%;
             background-repeat: no-repeat;
-            background-size: cover;
+            background-size: cover; */
             padding: 0;
             float: left;
             clear: both;
@@ -50,64 +52,46 @@
             justify-content: flex-end;
         }
 
-        div.dv-lvl-2.gallery-main-container {
-            display: flex; 
-            width: 90%;
-        }
-
-        div.dv-lvl-3.gallery-sign {
-            width: 10%;
-            display: flex;
-            flex-flow: column-reverse;
-            margin: 50px auto;
-            /* position: absolute;
-            height: 20px;
-            margin: auto 0;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            transform: rotate(270deg);
-            z-index: 23; */
-        }
-
-        div.dv-lvl-4.sign-index-container {
-            height: 20%;
-            background: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        span.sp-lvl-5.sign-index {
-            transform: rotate(270deg);
-            font-size: 3em;
-        }
-
-        p.par-lvl-4.sign-letters {
-            height: 80%;
-            margin: 0;
-            padding: 0;
-            color: #fff;
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            letter-spacing: 80px;
-            font-size: 3em;
-            transform: rotate(270deg);
-        }
-
         div.dv-lvl-2.footer-container {
             display: flex;
             justify-content: space-around;
             align-items: center;
             width: 1535px;
-            margin-bottom: 1.3em;
+            margin: 1.3em 0;
+        }
+
+        p.par-lvl-3.bass-letters,
+        p.par-lvl-3.seismic-letters {
+            /* color: #fff; */
+            font-size: .7em;
+            letter-spacing: 7px;
+        }
+
+        div.dv-lvl-2.bass-sign-container {
+            width: 100px;
+        }
+
+        div.dv-lvl-4.bass-sign-border {
+            width: 58%;
+            height: 1px;
+            background: #000;
+            position: relative;
+            top: 18px;
+            right: 10px;
+        }
+
+        div.dv-lvl-4.seismic-sign-border {
+            width: 100px;
+            height: 1px;
+            background: #000;
+            position: relative;
+            top: 18px;
+            right: 17px;
         }
 
         div.dv-lvl-3.sections-container {
             width: 600px;
-            color: #fff;
+            /* color: #fff; */
         }
 
         ul.ul-lvl-4.section-list {
@@ -123,7 +107,7 @@
 
         div.dv-lvl-3.social-media-container {
             width: 200px;
-            color: #fff;
+            /* color: #fff; */
         }
 
         ul.ul-lvl-4.social-media-list {
@@ -140,6 +124,170 @@
             margin: 0 20px;
         }
 
+        div.dv-lvl-2.music-sign  {
+            width: 80%;
+            margin: 70px auto 20px auto;
+            display: flex;
+            justify-content: center;
+        }
+
+        div.dv-lvl-2.music-tracks-container {
+            width: 80%;
+            margin: 50px auto 40px auto;
+        }
+
+        div.dv-lvl-3.music-track-container {
+            width: 100%;
+            background: #fff;
+            display: flex;
+        }
+
+        div.dv-lvl-4.music-track-details {
+            width: 30%;
+            display: flex;
+            flex-flow: column; 
+        }
+
+        div.dv-lvl-4.music-track-background {
+            background: url('./imgs/song-background.jpg');
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        div.dv-lvl-6.upper-symbols {
+            width: 40%;
+            display: flex;
+        }
+
+        div.dv-lvl-6.upper-track-text {
+            padding: .1em;
+        }
+
+        span.sp-lvl-7.album {
+            display: block;
+            color: #c2c2c2;
+            font-size: .9em;
+            margin: 30px 0 0 75px;
+            letter-spacing: 1px;
+        }
+
+        p.par-lvl-7.title {
+            display: block;
+            font-size: 4em;
+            margin-top: 15px;
+            position: relative;
+            left: 75px;
+        }
+        
+        div.dv-lvl-4.music-track-background {
+            width: 70%;
+        }
+
+        span.sp-lvl-7.left-arrow {
+            font-size: 1.5em;
+            color: #aaa;
+            display: block;
+            padding: 1.3em;
+        }
+
+        span.sp-lvl-7.dots {
+            font-size: 1.5em;
+            color: #aaa;
+            display: block;
+            padding: 1.3em;
+        }
+
+        div.dv-lvl-6.song-controllers {
+            margin: 100px 0 0 75px;
+            width: 40%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        div.dv-lvl-6.song-progress-bar {
+            margin: 10px 0 0 75px;
+            width: 70%;
+            border: 1px solid #000;
+        }
+
+        div.dv-lvl-6.song-progress-seconds {
+            margin: 10px 0 0 75px;
+            width: 70%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        span.sp-lvl-8.left,
+        span.sp-lvl-8.right {
+            font-size: .7em;
+        }
+
+        div.dv-lvl-6.song-additional-controllers {
+            margin: 15px 0 30px 75px;
+            width: 17%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        div.dv-lvl-7.random {
+            width: 25px;
+            height: 25px;
+            display: flex;
+            justify-content: space-between;
+            background: #000;
+        }
+
+        div.dv-lvl-7.previous,
+        div.dv-lvl-7.next {
+            background: #000;
+            width: 25px;
+            height: 25px;
+        }
+
+        div.dv-lvl-7.play {
+            background: #000;
+            width: 50px;
+            height: 50px;
+        }
+
+        div.dv-lvl-3.sign-index-container {
+            width: 250px;
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3em;
+            height: 250px;
+            z-index: 2;
+        }
+
+        div.dv-lvl-3.sign-letters-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 250px;
+            width: 300px;
+        }
+
+        span.sp-lvl-4.sign-index {
+            color: #fff;
+        }
+
+        p.par-lvl-4.sign-letters {
+            margin: 0;
+            width: 100%;
+            text-align: right;
+            font-size: 1.3em;
+            padding: 1em;
+            background: #fff;
+            position: relative;
+            right: 75px;
+            z-index: 1;
+
+        }
+
         div.dv-lvl-2.switch-section-buttons {
             width: 200px;
             position: static;
@@ -148,39 +296,9 @@
             align-items: center;
         }
 
-        p.par-lvl-3.bass-letters,
-        p.par-lvl-3.seismic-letters {
-            color: #fff;
-            font-size: .7em;
-            letter-spacing: 7px;
-        }
-
-        div.dv-lvl-2.bass-sign-container {
-            width: 100px;
-        }
-
-        div.dv-lvl-4.bass-sign-border {
-            width: 58%;
-            height: 1px;
-            background: #fff;
-            position: relative;
-            top: 18px;
-            right: 10px;
-        }
-
-        div.dv-lvl-4.seismic-sign-border {
-            width: 100px;
-            height: 1px;
-            background: #fff;
-            position: relative;
-            top: 18px;
-            right: 17px;
-        }
-
-
         div.dv-lvl-3.button-left,
         div.dv-lvl-3.button-right {
-            background: #f4eee4;
+            background: #000;
             width: 50px;
             height: 50px;
             border-radius: 50%;
@@ -189,14 +307,14 @@
             justify-content: center;
             align-items: center;
             font-size: 1.3em;
-            color: #000;
+            color: #fff;
             box-shadow: 0 0 8px -2px #fff;
         }
         
         div.dv-lvl-3.upper-left-corner-logo {
             width: 400px;
             height: 40px;
-            border: 1px solid #fff;
+            border: 1px solid #000;
             box-sizing: border-box;
             display: flex;
             position: absolute;
@@ -209,38 +327,9 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background: #fff;
+            background: #000;
             font-size: 1.3em;
-        }
-
-        div.dv-lvl-3.gallery-container {
-            width: 90%;
-            border: 1px solid #fff;
-            margin: 50px auto;
-            box-sizing: border-box;
-            padding-bottom: 8px;
-            backdrop-filter: blur(9px);
-        }
-
-        div.dv-lvl-4.gallery-row {
-            display: flex;
-            flex-wrap: wrap;
-            padding: 0 4px;
-            box-sizing: border-box;
-        }
-
-        div.dv-lvl-5.gallery-column {
-            flex: 25%;
-            max-width: 25%;
-            padding: 0 4px;
-            box-sizing: border-box;
-        }
-
-        img.img-lvl-6.gallery-image {
-            margin-top: 8px;
-            vertical-align: middle;
-            width: 100%;
-            box-sizing: border-box;
+            color: #fff;
         }
 
         @media screen and (max-width: 1534px), (max-height: 700px) {
@@ -260,10 +349,6 @@
             div.dv-lvl-2.sections-navbar,
             div.dv-lvl-2.footer-container {
                 width: 100%;
-            }
-
-            div.dv-lvl-2.footer-container {
-                margin: 1.3em 0;
             }
 
             div.dv-lvl-3.upper-left-corner-logo {
@@ -313,33 +398,7 @@
 
         }
 
-        @media screen and (max-width: 1200px) {
-            div.dv-lvl-2.gallery-main-container {
-                display: block;
-                width: 100%;
-            }
-            div.dv-lvl-3.gallery-sign {
-                display: block;
-                width: 90%;
-                margin: 20px auto;
-            }
-            span.sp-lvl-5.sign-index {
-                transform: rotate(0deg);
-            }
-            p.par-lvl-4.sign-letters {
-                transform: rotate(0deg);
-                padding-left: 65px;
-            }
-            div.dv-lvl-3.gallery-container {
-                margin: 0 auto;
-            }
-        }
-
         @media screen and (max-width: 1000px) {
-            div.dv-lvl-5.gallery-column {
-                flex: 50%;
-                max-width: 50%;
-            }
             div.dv-lvl-2.footer-container {
                 flex-flow: column;
             }
@@ -354,40 +413,15 @@
 
         }
 
-        @media screen and (max-width: 700px) {
-            p.par-lvl-4.sign-letters {
-                letter-spacing: 40px;
-            }
-        }
-
-        @media screen and (max-width: 600px) {
-            div.dv-lvl-5.gallery-column {
-                flex: 100%;
-                max-width: 100%;
-            }
-        }
-
-        @media screen and (max-width: 500px) {
-            p.par-lvl-4.sign-letters {
-                letter-spacing: 20px;
-                padding-left: 25px;
-            }
-        }
-
         @media screen and (max-width: 476px) {
             div.dv-lvl-3.upper-left-corner-logo {
                 width: 80%;
             }
+
         }
 
-        @media screen and (max-width: 350px) {
-            p.par-lvl-4.sign-letters {
-                letter-spacing: 0;
-                padding: 0;
-            }
-        }
+        @media screen and (min-height: 1000px) {
 
-        @media screen and (min-height: 1200px) {
             div.dv-lvl-0.background-container {
                 height: 100vh;
             }
@@ -400,6 +434,7 @@
                 margin: auto;
             }
         }
+
 
     </style>
 </head>
@@ -452,45 +487,70 @@
 
             </div>
 
-            <!-- Gallery container -->
-            <div class="dv-lvl-2 gallery-main-container">
+            <!-- Music sign section -->
+            <div class="dv-lvl-2 music-sign">
+                <div class="dv-lvl-3 sign-index-container">
+                    <span class="sp-lvl-4 sign-index">4</span>
+                </div>
+                <div class="dv-lvl-3 sign-letters-container">
+                    <p class="par-lvl-4 sign-letters">MUSIC</p>
+                </div>
+            </div>
 
-                <div class="dv-lvl-3 gallery-sign">
-                    <div class="dv-lvl-4 sign-index-container"><span class="sp-lvl-5 sign-index">2</span></div>
-                    <p class="par-lvl-4 sign-letters">GALLERY</p>
-                </div>    
 
+            <!-- Music tracks section -->
+            <div class="dv-lvl-2 music-tracks-container">
 
-                <!-- Photo section -->
-                <div class="dv-lvl-3 gallery-container">
-                    <div class="dv-lvl-4 gallery-row">
-                        <div class="dv-lvl-5 gallery-column">
-                            <img src="./imgs/img-1.jpg" alt="bass-photo-1" class="img-lvl-6 gallery-image">
-                            <img src="./imgs/img-2.jpg" alt="bass-photo-2" class="img-lvl-6 gallery-image">
-                            <img src="./imgs/img-15.jpg" alt="bass-photo-4" class="img-lvl-6 gallery-image">
+                <div class="dv-lvl-3 music-track-container">
+
+                    <div class="dv-lvl-4 music-track-details">
+
+                        <div class="dv-lvl-5 upper-block">
+
+                            <div class="dv-lvl-6 upper-symbols">
+                                <span class="sp-lvl-7 left-arrow">
+                                    <i class="fas fa-chevron-left"></i>
+                                </span>
+                                <span class="sp-lvl-7 dots">
+                                    <i class="fas fa-ellipsis-h"></i>
+                                </span>
+                            </div>
+
+                            <div class="dv-lvl-6 upper-track-text">
+                                <span class="sp-lvl-7 album">God is an astronaut - Helios Erebus</span>
+                                <p class="par-lvl-7 title">Obscura's Somnia Solid</p>
+                            </div>
+
                         </div>
-                        <div class="dv-lvl-5 gallery-column">
-                            <img src="./imgs/img-5.jpg" alt="bass-photo-5" class="img-lvl-6 gallery-image">
-                            <img src="./imgs/img-6.jpg" alt="bass-photo-6" class="img-lvl-6 gallery-image">
-                            <img src="./imgs/img-7.jpg" alt="bass-photo-7" class="img-lvl-6 gallery-image">
-                            <img src="./imgs/img-12.jpg" alt="bass-photo-8" class="img-lvl-6 gallery-image">
+
+                        <div class="dv-lvl-5 lower-block">
+
+                            <div class="dv-lvl-6 song-controllers">
+                                <div class="dv-lvl-7 previous"></div>
+                                <div class="dv-lvl-7 play"></div>
+                                <div class="dv-lvl-7 next"></div>
+                            </div>
+
+                            <div class="dv-lvl-6 song-progress-bar"></div>
+                            <div class="dv-lvl-6 song-progress-seconds">
+                                <span class="sp-lvl-8 left">0:00</span>
+                                <span class="sp-lvl-8 right">3:45</span>
+                            </div>
+
+                            <div class="dv-lvl-6 song-additional-controllers">
+                                <div class="dv-lvl-7 random"></div>
+                                <div class="dv-lvl-7 random"></div>
+                            </div>
+
                         </div>
-                        <div class="dv-lvl-5 gallery-column">
-                            <img src="./imgs/img-9.jpg" alt="bass-photo-9" class="img-lvl-6 gallery-image">
-                            <img src="./imgs/img-10.jpg" alt="bass-photo-10" class="img-lvl-6 gallery-image">
-                            <img src="./imgs/img-11.jpg" alt="bass-photo-11" class="img-lvl-6 gallery-image">
-                            <img src="./imgs/img-8.jpg" alt="bass-photo-12" class="img-lvl-6 gallery-image">
-                        </div>
-                        <div class="dv-lvl-5 gallery-column">
-                            <img src="./imgs/img-13.jpg" alt="bass-photo-13" class="img-lvl-6 gallery-image">
-                            <img src="./imgs/img-14.jpg" alt="bass-photo-14" class="img-lvl-6 gallery-image">
-                            <img src="./imgs/img-4.jpg" alt="bass-photo-15" class="img-lvl-6 gallery-image">
-                        </div>
+
                     </div>
+
+                    <div class="dv-lvl-4 music-track-background"></div>
+
                 </div>
 
             </div>
-            
 
             <!-- Footer container -->
             <div class="dv-lvl-2 footer-container">
