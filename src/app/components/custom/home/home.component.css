@@ -1,0 +1,131 @@
+div.dv-lvl-2.blur-layer {
+    position: absolute;
+    top: 0;
+    margin: 0 auto;
+    z-index: -1;
+    width: 40%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(9px);
+}
+
+p.par-lvl-3.bass-paragraph {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 123px;
+    left: 423px;
+    background-image: url('/assets/imgs/concert.jpg');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 7.5em;
+}
+
+p.par-lvl-3.seismic-paragraph {
+    top: 67px;
+    left: 617px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    color: #fff;
+    font-size: 4.5em;
+}
+
+div.dv-lvl-2.presentation-card {
+    width: 500px;
+    height: 300px;
+    border: 1px solid #fff;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 70px;
+    left: 70px;
+    display: flex;
+    margin-bottom: -1px;
+}
+
+div.dv-lvl-3.card-index {
+    width: 15%;
+    border-right: 1px solid #fff;
+    box-sizing: border-box;
+}
+
+div.dv-lvl-4.card-index-number {
+    height: 50px;
+    width: 100%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3em;
+}
+
+div.dv-lvl-3.card-content {
+    width: 85%;
+}
+
+h1.he-lvl-4.card-header,
+p.par-lvl-4.card-text {
+    padding: 0 20px 0 20px;
+}
+
+p.par-lvl-4.card-text {
+    text-align: justify;
+}
+
+@media screen and (max-width: 1534px),
+(max-height: 700px) {
+    div.dv-lvl-2.blur-layer {
+        position: static;
+        padding: .1px;
+    }
+    p.par-lvl-3.bass-paragraph,
+    p.par-lvl-3.seismic-paragraph {
+        position: static;
+        text-align: center;
+    }
+    div.dv-lvl-2.presentation-card {
+        position: static;
+        margin: 20px auto;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    div.dv-lvl-2.blur-layer {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    div.dv-lvl-2.blur-layer {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    div.dv-lvl-2.presentation-card {
+        flex-flow: column;
+        width: 90%;
+        height: auto;
+    }
+    div.dv-lvl-3.card-index {
+        background: #fff;
+        display: flex;
+        margin: 0 auto;
+    }
+    div.dv-lvl-3.card-content {
+        margin: 0 auto;
+    }
+    h1.he-lvl-4.card-header {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 476px) {
+    div.dv-lvl-3.card-index {
+        width: 20%;
+    }
+}

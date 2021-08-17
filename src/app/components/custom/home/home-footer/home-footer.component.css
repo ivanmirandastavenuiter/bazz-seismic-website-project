@@ -1,0 +1,124 @@
+div.dv-lvl-2.footer-container {
+    width: 1535px;
+}
+
+div.dv-lvl-3.corner-square-border.top {
+    height: 100px;
+    width: 1px;
+    background: #fff;
+    position: absolute;
+    right: 30px;
+    bottom: 140px;
+}
+
+div.dv-lvl-3.corner-square-border.left {
+    height: 1px;
+    width: 100px;
+    background: #fff;
+    position: absolute;
+    right: 150px;
+    bottom: 20px;
+}
+
+div.dv-lvl-3.corner-square-sign.top {
+    height: 10px;
+    width: 100px;
+    color: #fff;
+    position: absolute;
+    right: -16.5px;
+    bottom: 189px;
+    transform: rotate(270deg);
+    text-align: center;
+    letter-spacing: 7px;
+    font-size: .9em;
+}
+
+div.dv-lvl-3.corner-square-sign.left {
+    height: 10px;
+    width: 100px;
+    color: #fff;
+    position: absolute;
+    right: 150px;
+    bottom: 20px;
+    text-align: center;
+    letter-spacing: 7px;
+    font-size: .9em;
+}
+
+div.dv-lvl-3.corner-square-img {
+    width: 100px;
+    height: 100px;
+    background: url('/assets/imgs/smile.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+    box-sizing: border-box;
+    border: 5px solid #fff;
+}
+
+div.dv-lvl-2.switch-section-buttons {
+    width: 200px;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.3em;
+}
+
+div.dv-lvl-3.button-left,
+div.dv-lvl-3.button-right {
+    background: rgba(230, 230, 230, .5);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: .5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3em;
+    color: #fff;
+    box-shadow: 0 0 8px -2px #ceb40e;
+}
+
+@media screen and (max-width: 1534px),
+(max-height: 700px) {
+    div.dv-lvl-2.footer-container {
+        width: 100%;
+    }
+    div.dv-lvl-3.corner-square-border.left,
+    div.dv-lvl-3.corner-square-sign.left,
+    div.dv-lvl-3.corner-square-img,
+    div.dv-lvl-3.corner-square-border.top,
+    div.dv-lvl-3.corner-square-sign.top {
+        position: static;
+        margin: 10px auto;
+    }
+    div.dv-lvl-3.corner-square-border.left {
+        margin-top: 20px;
+    }
+    div.dv-lvl-3.corner-square-sign.left {
+        position: relative;
+        left: 6px;
+    }
+    div.dv-lvl-3.corner-square-border.top {
+        height: 1px;
+        width: 100px;
+        margin-top: 35px;
+    }
+    div.dv-lvl-3.corner-square-sign.top {
+        transform: rotate(0deg);
+        position: relative;
+        right: -4.5px;
+        bottom: 19px;
+    }
+    div.dv-lvl-2.switch-section-buttons {
+        position: static;
+    }
+}

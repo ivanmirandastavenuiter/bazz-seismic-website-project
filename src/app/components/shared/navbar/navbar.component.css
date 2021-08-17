@@ -1,0 +1,109 @@
+div.dv-lvl-2.sections-navbar {
+    width: 1535px;
+    top: 20px;
+    right: 0;
+    display: flex;
+    padding-top: 20px;
+    justify-content: flex-end;
+}
+
+div.dv-lvl-3.upper-left-corner-logo {
+    width: 400px;
+    height: 40px;
+    border: 1px solid #fff;
+    box-sizing: border-box;
+    display: flex;
+    position: absolute;
+    top: 20px;
+    left: 40px;
+}
+
+div.dv-lvl-4.left-logo {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    font-size: 1.3em;
+}
+
+div.dv-lvl-3.sections-container {
+    width: 600px;
+    color: #fff;
+}
+
+ul.ul-lvl-4.section-list {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+}
+
+li.li-lvl-5.section-list-item {
+    letter-spacing: 7px;
+    font-size: .6em;
+}
+
+div.dv-lvl-3.social-media-container {
+    width: 200px;
+    color: #fff;
+}
+
+ul.ul-lvl-4.social-media-list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    list-style-type: none;
+    padding-inline-start: 0;
+    margin-block-start: .7em;
+}
+
+li.li-lvl-5.social-media-item {
+    font-size: 1em;
+    margin: 0 20px;
+}
+
+@media screen and (max-width: 1534px),
+(max-height: 700px) {
+    div.dv-lvl-2.sections-navbar {
+        width: 100%;
+    }
+    div.dv-lvl-3.upper-left-corner-logo {
+        position: static;
+        margin: 20px auto;
+    }
+    div.dv-lvl-2.sections-navbar {
+        position: static;
+        flex-flow: column;
+        margin: 0 auto;
+    }
+    div.dv-lvl-3.sections-container {
+        position: static;
+        margin: 0 auto;
+        width: 100%;
+    }
+    ul.ul-lvl-4.section-list {
+        flex-flow: column;
+        text-align: center;
+        padding-inline-start: 0;
+    }
+    li.li-lvl-5.section-list-item {
+        margin: 10px;
+        padding-left: 7px;
+    }
+    div.dv-lvl-3.social-media-container {
+        margin: 0 auto;
+    }
+    ul.ul-lvl-4.social-media-list {
+        flex-flow: column;
+        justify-content: center;
+    }
+    li.li-lvl-5.social-media-item {
+        margin: 10px auto;
+    }
+}
+
+@media screen and (max-width: 476px) {
+    div.dv-lvl-3.upper-left-corner-logo {
+        width: 80%;
+    }
+}

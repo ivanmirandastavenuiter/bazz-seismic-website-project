@@ -1,0 +1,20 @@
+<!-- Skeleton -->
+<div class="dv-lvl-0 background-container">
+
+    <div class="dv-lvl-1 main-container">
+
+        <app-navbar></app-navbar>
+
+        <router-outlet (activate)="onActivate($event)"></router-outlet>
+
+        <ng-container *ngIf="selectedChild === 'Home'">
+            <app-home-footer></app-home-footer>
+        </ng-container>
+
+        <ng-container *ngIf="selectedChild !== 'Home'">
+
+        </ng-container>
+
+    </div>
+
+</div>

@@ -1,0 +1,37 @@
+div.dv-lvl-0.background-container {
+    position: relative;
+    z-index: -2;
+    height: 100vh;
+    width: 100vw;
+    min-width: 300px;
+    background-image: url('/assets/imgs/concert.jpg');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0;
+}
+
+div.dv-lvl-1.main-container {
+    z-index: 0;
+    position: relative;
+    width: 1535px;
+    min-width: 150px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+    font-family: 'Bebas Neue', cursive;
+}
+
+@media screen and (max-width: 1534px),
+(max-height: 700px) {
+    div.dv-lvl-0.background-container {
+        height: auto;
+        background-attachment: fixed;
+        float: left;
+        clear: both;
+    }
+    div.dv-lvl-1.main-container {
+        width: 100vw;
+        height: 100%;
+    }
+}
