@@ -1,9 +1,9 @@
 <!-- Skeleton -->
-<div class="dv-lvl-0 background-container">
+<div [ngClass]="['dv-lvl-0', 'background-container', selectedChild | lowercase ]">
 
     <div class="dv-lvl-1 main-container">
 
-        <app-navbar></app-navbar>
+        <app-navbar [currentSection]="selectedChild"></app-navbar>
 
         <router-outlet (activate)="onActivate($event)"></router-outlet>
 
@@ -12,7 +12,7 @@
         </ng-container>
 
         <ng-container *ngIf="selectedChild !== 'Home'">
-
+            <app-footer [currentSection]="selectedChild"></app-footer>
         </ng-container>
 
     </div>

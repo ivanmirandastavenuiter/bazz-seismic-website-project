@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -7,14 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  title: string = 'whatever';
+  private _currentSection: string = '';
 
-  constructor() { 
-    console.log('Built')
+  @Input()
+  set currentSection(currentSection: string) {
+    this._currentSection = currentSection;
   }
+  get currentSection() { return this._currentSection };
+  
+  constructor(private elementRef: ElementRef) { }
 
   ngOnInit(): void {
-    console.log('On init');
   }
 
 }

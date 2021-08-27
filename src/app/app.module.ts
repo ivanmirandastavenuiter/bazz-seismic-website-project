@@ -7,6 +7,8 @@ import { HomeComponent } from './components/custom/home/home.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { GalleryComponent } from './components/custom/gallery/gallery.component';
 import { HomeFooterComponent } from './components/custom/home/home-footer/home-footer.component';
+import { FooterComponent } from './components/shared/footer/footer.component';
+import { ContactComponent } from './components/custom/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +17,8 @@ import { HomeFooterComponent } from './components/custom/home/home-footer/home-f
     NavbarComponent,
     GalleryComponent,
     HomeFooterComponent,
+    FooterComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,

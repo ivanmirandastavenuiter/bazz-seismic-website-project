@@ -1,4 +1,4 @@
-import { AfterViewInit, Component } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +9,9 @@ export class AppComponent {
 
   selectedChild: string = 'Home';
 
-  onActivate(componentRef: any){
+  constructor() {}
+
+  onActivate(componentRef: any) {
     this.selectedChild = componentRef.title;
   }
 
