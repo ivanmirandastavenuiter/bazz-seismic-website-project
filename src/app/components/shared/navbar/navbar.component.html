@@ -1,5 +1,5 @@
 <!-- Section nav bar -->
-<div class="dv-lvl-2 sections-navbar">
+<div [ngClass]="['dv-lvl-2', 'sections-navbar', currentSection | lowercase ]">
 
     <!-- Upper left corner logo -->
     <div [ngClass]="['dv-lvl-3', 'upper-left-corner-logo', currentSection | lowercase ]">

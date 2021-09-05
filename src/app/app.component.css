@@ -16,7 +16,6 @@ div.dv-lvl-0.background-container.home {
 div.dv-lvl-0.background-container.gallery {
     position: relative;
     z-index: -2;
-    height: auto;
     width: 100vw;
     min-width: 250px;
     background-image: url('/assets/imgs/mixer.jpg');
@@ -67,10 +66,11 @@ div.dv-lvl-1.main-container {
     div.dv-lvl-1.main-container {
         width: 100vw;
         height: 100%;
+        margin: 420px auto 0 auto;
     }
 }
 
-@media screen and (min-height: 1200px) {
+@media screen and (min-height: 1400px) {
     div.dv-lvl-0.background-container.gallery {
         height: 100vh;
     }

@@ -1,9 +1,28 @@
+:host {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 100%;
+    position: relative;
+}
+
 div.dv-lvl-2.footer-container {
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 1535px;
     margin-bottom: 1.3em;
+    font-family: 'Bebas Neue', cursive;
+}
+
+div.dv-lvl-2.footer-container.gallery {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 1535px;
+    margin-bottom: 1.3em;
+    position: absolute;
+    bottom: 0;
 }
 
 div.dv-lvl-2.footer-container.contact {
@@ -71,6 +90,9 @@ div.dv-lvl-4.seismic-sign-border {
     div.dv-lvl-2.footer-container {
         width: 100%;
         margin: 1.3em 0;
+    }
+    div.dv-lvl-2.footer-container.gallery {
+        width: 100%;
     }
     div.dv-lvl-2.footer-container.contact {
         width: 100%;

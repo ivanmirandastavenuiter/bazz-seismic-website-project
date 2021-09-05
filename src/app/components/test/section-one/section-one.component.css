@@ -1,0 +1,15 @@
+div.background {
+    background: url('/assets/imgs/concert.jpg');
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    padding: .1px;
+}
+
+div.block-one,
+div.block-two {
+    width: 1000px;
+    background: red;
+    height: 200px;
+    margin: 10em auto;
+}
