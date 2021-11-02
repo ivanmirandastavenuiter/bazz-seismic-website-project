@@ -1,0 +1,119 @@
+<!-- Top background container -->
+<div class="dv-lvl-0 background-container music">
+
+    <!-- Fix width container -->
+    <div class="dv-lvl-1 main-container">
+
+        <!-- Music sign section -->
+        <div class="dv-lvl-2 music-sign">
+            <div class="dv-lvl-3 sign-index-container">
+                <span class="sp-lvl-4 sign-index">4</span>
+            </div>
+            <div class="dv-lvl-3 sign-letters-container">
+                <p class="par-lvl-4 sign-letters">MUSIC</p>
+            </div>
+        </div>
+
+        <!-- Music tracks section -->
+        <div class="dv-lvl-2 music-tracks-container">
+
+            <div class="dv-lvl-3 music-track-container">
+
+                <div class="dv-lvl-4 music-track-details">
+
+                    <div class="dv-lvl-5 upper-block">
+
+                        <div class="dv-lvl-6 upper-symbols">
+                            <!-- <span class="sp-lvl-7 left-arrow">
+                                <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="sp-lvl-7 dots">
+                                <i class="fas fa-ellipsis-h"></i>
+                            </span> -->
+                        </div>
+
+                        <div class="dv-lvl-6 upper-track-text">
+                            <span class="sp-lvl-7 album">God is an astronaut - Helios Erebus</span>
+                            <p class="par-lvl-7 title">Obscura's Somnia Solid</p>
+                        </div>
+
+                    </div>
+
+                    <div class="dv-lvl-5 lower-block">
+
+                        <vm-player #player>
+                            <vm-audio>
+                                <source #source [src]="this.songs[0]" type="audio/mp3" />
+                            </vm-audio>
+                            <vm-ui>
+
+                                <vm-controls>
+
+                                    <div class="play-control-test">
+
+                                        <vm-control class="previous" keys="p" label="Previous" pressed="paused" (click)="onPreviousClick()">
+
+                                            <i class="fas fa-backward"></i>
+                                            <vm-tooltip>Previous (p)</vm-tooltip>
+
+                                        </vm-control>
+
+                                        <vm-playback-control></vm-playback-control>
+
+                                        <vm-control class="next" keys="n" label="Next" pressed="paused" (click)="onForwardClick()">
+
+                                            <i class="fas fa-forward"></i>
+                                            <vm-tooltip>Next (n)</vm-tooltip>
+
+                                        </vm-control>
+
+                                    </div>
+
+                                    <div class="progress-bar-test">
+                                        <vm-scrubber-control></vm-scrubber-control>
+                                    </div>
+
+                                    <div class="times-test">
+                                        <vm-current-time></vm-current-time>
+                                        <vm-end-time></vm-end-time>
+                                    </div>
+
+                                </vm-controls>
+
+                            </vm-ui>
+
+                        </vm-player>
+
+                        <div class="dv-lvl-6 song-controllers">
+                            <div class="dv-lvl-7 previous">
+                                <i class="fas fa-backward"></i>
+                            </div>
+                            <div class="dv-lvl-7 play">
+                                <i class="fas fa-play"></i>
+                            </div>
+                            <div class="dv-lvl-7 next">
+                                <i class="fas fa-forward"></i>
+                            </div>
+                        </div>
+
+                        <div class="dv-lvl-6 song-progress-bar"></div>
+                        <div class="dv-lvl-6 song-progress-seconds">
+                            <span class="sp-lvl-8 left">0:00</span>
+                            <span class="sp-lvl-8 right">3:45</span>
+                        </div>
+
+                        <div class="dv-lvl-6 song-additional-controllers">
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="dv-lvl-4 music-track-background"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>

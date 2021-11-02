@@ -16,10 +16,25 @@ div.dv-lvl-2.sections-navbar {
     position: absolute;
 }
 
+div.dv-lvl-2.sections-navbar.music {
+    z-index: 1;
+}
+
 div.dv-lvl-3.upper-left-corner-logo {
     width: 400px;
     height: 40px;
     border: 1px solid #fff;
+    box-sizing: border-box;
+    display: flex;
+    position: absolute;
+    top: 20px;
+    left: 40px;
+}
+
+div.dv-lvl-3.upper-left-corner-logo.music {
+    width: 400px;
+    height: 40px;
+    border: 1px solid #000;
     box-sizing: border-box;
     display: flex;
     position: absolute;
@@ -57,9 +72,24 @@ div.dv-lvl-4.left-logo.contact {
     color: #fff;
 }
 
+div.dv-lvl-4.left-logo.music {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    font-size: 1.3em;
+    color: #fff;
+}
+
 div.dv-lvl-3.sections-container {
     width: 600px;
     color: #fff;
+}
+
+div.dv-lvl-3.sections-container.music {
+    width: 600px;
+    color: #000;
 }
 
 ul.ul-lvl-4.section-list {
@@ -83,6 +113,11 @@ div.dv-lvl-3.social-media-container {
     color: #fff;
 }
 
+div.dv-lvl-3.social-media-container.music {
+    width: 200px;
+    color: #000;
+}
+
 ul.ul-lvl-4.social-media-list {
     display: flex;
     justify-content: flex-start;
@@ -103,7 +138,8 @@ li.li-lvl-5.social-media-item {
         width: 100%;
     }
     div.dv-lvl-3.upper-left-corner-logo,
-    div.dv-lvl-3.upper-left-corner-logo.contact {
+    div.dv-lvl-3.upper-left-corner-logo.contact,
+    div.dv-lvl-3.upper-left-corner-logo.music {
         position: static;
         margin: 20px auto;
     }
@@ -111,8 +147,10 @@ li.li-lvl-5.social-media-item {
         /* position: static; */
         flex-flow: column;
         margin: 0 auto;
+        z-index: 1;
     }
-    div.dv-lvl-3.sections-container {
+    div.dv-lvl-3.sections-container,
+    div.dv-lvl-3.sections-container.music {
         position: static;
         margin: 0 auto;
         width: 100%;
@@ -139,7 +177,9 @@ li.li-lvl-5.social-media-item {
 }
 
 @media screen and (max-width: 476px) {
-    div.dv-lvl-3.upper-left-corner-logo {
+    div.dv-lvl-3.upper-left-corner-logo,
+    div.dv-lvl-3.upper-left-corner-logo.contact,
+    div.dv-lvl-3.upper-left-corner-logo.music {
         width: 80%;
     }
 }

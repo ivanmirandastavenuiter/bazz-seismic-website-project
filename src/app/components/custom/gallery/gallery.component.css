@@ -1,3 +1,28 @@
+div.dv-lvl-0.background-container {
+    position: relative;
+    z-index: -2;
+    width: 100vw;
+    min-width: 250px;
+    background-image: url('/assets/imgs/mixer.jpg');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0;
+    float: left;
+    clear: both;
+}
+
+div.dv-lvl-1.main-container {
+    z-index: 0;
+    position: relative;
+    width: 1535px;
+    min-width: 150px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+    font-family: 'Bebas Neue', cursive;
+}
+
 div.dv-lvl-2.gallery-main-container {
     display: flex;
     width: 90%;
@@ -70,8 +95,25 @@ img.img-lvl-6.gallery-image {
 
 @media screen and (max-width: 1534px),
 (max-height: 700px) {
+    div.dv-lvl-0.background-container {
+        height: auto;
+        background-attachment: fixed;
+        float: left;
+        clear: both;
+    }
+    div.dv-lvl-1.main-container {
+        width: 100vw;
+        height: 100%;
+        margin: 420px auto 0 auto;
+    }
     div.dv-lvl-3.gallery-container {
         margin: 50px auto;
+    }
+}
+
+@media screen and (min-height: 1400px) {
+    div.dv-lvl-0.background-container {
+        height: 100vh;
     }
 }
 
@@ -128,92 +170,5 @@ img.img-lvl-6.gallery-image {
     p.par-lvl-4.sign-letters {
         letter-spacing: 0;
         padding: 0;
-    }
-}
-
-
-/* Provisional */
-
-div.dv-lvl-0.background-container.home {
-    position: relative;
-    z-index: -2;
-    height: 100vh;
-    width: 100vw;
-    min-width: 300px;
-    background-image: url('/assets/imgs/concert.jpg');
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 0;
-    float: left;
-    clear: both;
-}
-
-div.dv-lvl-0.background-container.gallery {
-    position: relative;
-    z-index: -2;
-    width: 100vw;
-    min-width: 250px;
-    background-image: url('/assets/imgs/mixer.jpg');
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 0;
-    float: left;
-    clear: both;
-}
-
-div.dv-lvl-0.background-container.contact {
-    position: relative;
-    z-index: -2;
-    height: auto;
-    width: 100vw;
-    min-width: 300px;
-    background: url('/assets/imgs/blonde-vinil.jpg');
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 0;
-    float: left;
-    clear: both;
-}
-
-div.dv-lvl-1.main-container {
-    z-index: 0;
-    position: relative;
-    width: 1535px;
-    min-width: 150px;
-    height: 100%;
-    margin: 0 auto;
-    padding: 0;
-    font-family: 'Bebas Neue', cursive;
-}
-
-@media screen and (max-width: 1534px),
-(max-height: 700px) {
-    div.dv-lvl-0.background-container.home,
-    div.dv-lvl-0.background-container.gallery,
-    div.dv-lvl-0.background-container.contact {
-        height: auto;
-        background-attachment: fixed;
-        float: left;
-        clear: both;
-    }
-    div.dv-lvl-1.main-container {
-        width: 100vw;
-        height: 100%;
-        margin: 420px auto 0 auto;
-    }
-}
-
-@media screen and (min-height: 1400px) {
-    div.dv-lvl-0.background-container.gallery {
-        height: 100vh;
-    }
-}
-
-@media screen and (min-height: 1500px) {
-    div.dv-lvl-0.background-container.contact {
-        height: 100vh;
     }
 }

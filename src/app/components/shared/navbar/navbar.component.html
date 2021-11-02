@@ -7,7 +7,7 @@
     </div>
 
     <!-- Sections labels -->
-    <div class="dv-lvl-3 sections-container">
+    <div [ngClass]="['dv-lvl-3', 'sections-container', currentSection | lowercase ]">
 
         <ul class="ul-lvl-4 section-list">
 
@@ -29,7 +29,7 @@
     </div>
 
     <!-- Social media -->
-    <div class="dv-lvl-3 social-media-container">
+    <div [ngClass]="['dv-lvl-3', 'social-media-container', currentSection | lowercase ]">
 
         <ul class="ul-lvl-4 social-media-list">
 
