@@ -21,7 +21,7 @@ div.dv-lvl-1.main-container {
     z-index: 0;
     position: relative;
     width: 1535px;
-    min-width: 150px;
+    min-width: 300px;
     margin: 150px auto 0 auto;
     padding: 0;
     font-family: 'Bebas Neue', cursive;
@@ -44,7 +44,7 @@ div.dv-lvl-3.music-track-container {
     width: 100%;
     background: #fff;
     display: flex;
-    min-width: 340px;
+    min-width: 275px;
 }
 
 div.dv-lvl-4.music-track-details {
@@ -54,7 +54,6 @@ div.dv-lvl-4.music-track-details {
 }
 
 div.dv-lvl-4.music-track-background {
-    background: url('/assets/imgs/song-background.jpg');
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -90,21 +89,6 @@ div.dv-lvl-4.music-track-background {
     width: 70%;
 }
 
-
-/* span.sp-lvl-7.left-arrow {
-    font-size: 1.5em;
-    color: #aaa;
-    display: block;
-    padding: 1.3em;
-}
-
-span.sp-lvl-7.dots {
-    font-size: 1.5em;
-    color: #aaa;
-    display: block;
-    padding: 1.3em;
-} */
-
 div.dv-lvl-6.song-controllers {
     margin: 100px 0 0 75px;
     width: 40%;
@@ -117,7 +101,6 @@ div.dv-lvl-6.song-controllers {
 div.dv-lvl-6.song-progress-bar {
     margin: 10px 0 0 75px;
     width: 70%;
-    border: 1px solid #000;
 }
 
 div.dv-lvl-6.song-progress-seconds {
@@ -138,15 +121,6 @@ div.dv-lvl-6.song-additional-controllers {
     display: flex;
     justify-content: space-between;
 }
-
-
-/* div.dv-lvl-7.random {
-    width: 25px;
-    height: 25px;
-    display: flex;
-    justify-content: space-between;
-    background: #000;
-} */
 
 div.dv-lvl-7.previous,
 div.dv-lvl-7.next {
@@ -201,27 +175,6 @@ p.par-lvl-4.sign-letters {
     z-index: 1;
 }
 
-.play-control-test {
-    margin: 100px 0 0 75px;
-    width: 40%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    min-width: 130px;
-}
-
-.progress-bar-test {
-    margin: 10px 0 0 75px;
-    width: 70%;
-}
-
-.times-test {
-    margin: 10px 0 0 75px;
-    width: 70%;
-    display: flex;
-    justify-content: space-between;
-}
-
 i,
 vm-playback-control {
     color: #000;
@@ -251,6 +204,12 @@ vm-player {
 
 vm-player[audio] {
     --vm-controls-bg: #fff;
+}
+
+div.dv-lvl-intermediate.controls-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
 @media screen and (max-width: 1534px),
@@ -345,5 +304,12 @@ vm-player[audio] {
 @media screen and (min-height: 1300px) {
     div.dv-lvl-0.background-container {
         height: 100vh;
+    }
+}
+
+@media screen and (min-height: 300px) {
+    div.dv-lvl-2.music-sign,
+    div.dv-lvl-2.music-tracks-container {
+        width: 100%;
     }
 }

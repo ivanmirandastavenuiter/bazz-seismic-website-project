@@ -106,7 +106,8 @@ div.dv-lvl-4.seismic-sign-border {
     div.dv-lvl-2.footer-container.gallery {
         width: 100%;
     }
-    div.dv-lvl-2.footer-container.contact {
+    div.dv-lvl-2.footer-container.contact,
+    div.dv-lvl-2.footer-container.music {
         width: 100%;
     }
     div.dv-lvl-2.switch-section-buttons {
