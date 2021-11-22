@@ -8,13 +8,17 @@
     </div>
 
     <!-- Switch section buttons -->
-    <div class="dv-lvl-2 switch-section-buttons">
+    <div [ngClass]="['dv-lvl-2', 'switch-section-buttons', currentSection | lowercase ]">
 
         <div class="dv-lvl-3 button-left">
-            <i class="fas fa-chevron-left"></i>
+            <a [routerLink]="[ previousPage ]">
+                <i class="fas fa-chevron-left"></i>
+            </a>
         </div>
         <div class="dv-lvl-3 button-right">
-            <i class="fas fa-chevron-right"></i>
+            <a [routerLink]="[ nextPage ]">
+                <i class="fas fa-chevron-right"></i>
+            </a>
         </div>
 
     </div>

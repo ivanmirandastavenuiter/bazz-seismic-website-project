@@ -9,7 +9,7 @@
     <!-- Sections labels -->
     <div [ngClass]="['dv-lvl-3', 'sections-container', currentSection | lowercase ]">
 
-        <ul class="ul-lvl-4 section-list">
+        <ul [ngClass]="['ul-lvl-4', 'section-list', currentSection | lowercase]">
 
             <li class="li-lvl-5 section-list-item">
                 <a [routerLink]="['home']">HOME</a>
@@ -31,7 +31,7 @@
     <!-- Social media -->
     <div [ngClass]="['dv-lvl-3', 'social-media-container', currentSection | lowercase ]">
 
-        <ul class="ul-lvl-4 social-media-list">
+        <ul [ngClass]="['ul-lvl-4', 'social-media-list', currentSection | lowercase ]">
 
             <li class="li-lvl-5 social-media-item">
                 <i class="fab fa-twitter"></i>

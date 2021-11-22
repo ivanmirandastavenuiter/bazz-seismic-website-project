@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class GalleryComponent implements OnInit {
 
   title: string = 'Gallery';
+  previousPage: string = '/home';
+  nextPage: string = '/music';
 
   constructor() { }
 

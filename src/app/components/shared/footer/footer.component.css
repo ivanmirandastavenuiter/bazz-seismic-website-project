@@ -84,8 +84,36 @@ div.dv-lvl-3.button-right {
     justify-content: center;
     align-items: center;
     font-size: 1.3em;
-    color: #000;
-    box-shadow: 0 0 8px -2px #fff;
+}
+
+div.dv-lvl-2.switch-section-buttons.gallery div.dv-lvl-3.button-left,
+div.dv-lvl-2.switch-section-buttons.gallery div.dv-lvl-3.button-right {
+    box-shadow: 0 0 8px -2px #e97719;
+}
+
+div.dv-lvl-2.switch-section-buttons.gallery div.dv-lvl-3.button-left a,
+div.dv-lvl-2.switch-section-buttons.gallery div.dv-lvl-3.button-right a {
+    color: #e97719;
+}
+
+div.dv-lvl-2.switch-section-buttons.music div.dv-lvl-3.button-left,
+div.dv-lvl-2.switch-section-buttons.music div.dv-lvl-3.button-right {
+    box-shadow: 0 0 8px -2px #797168;
+}
+
+div.dv-lvl-2.switch-section-buttons.music div.dv-lvl-3.button-left a,
+div.dv-lvl-2.switch-section-buttons.music div.dv-lvl-3.button-right a {
+    color: #797168;
+}
+
+div.dv-lvl-2.switch-section-buttons.contact div.dv-lvl-3.button-left,
+div.dv-lvl-2.switch-section-buttons.contact div.dv-lvl-3.button-right {
+    box-shadow: 0 0 8px -2px #d70127;
+}
+
+div.dv-lvl-2.switch-section-buttons.contact div.dv-lvl-3.button-left a,
+div.dv-lvl-2.switch-section-buttons.contact div.dv-lvl-3.button-right a {
+    color: #d70127;
 }
 
 div.dv-lvl-4.seismic-sign-border {

@@ -87,6 +87,12 @@ div.dv-lvl-3.button-right {
     box-shadow: 0 0 8px -2px #ceb40e;
 }
 
+div.dv-lvl-3.button-left a,
+div.dv-lvl-3.button-right a {
+    color: #fff;
+    text-decoration: none;
+}
+
 @media screen and (max-width: 1534px),
 (max-height: 700px) {
     div.dv-lvl-2.footer-container {

@@ -307,7 +307,7 @@ div.dv-lvl-intermediate.controls-container {
     }
 }
 
-@media screen and (min-height: 300px) {
+@media screen and (max-width: 300px) {
     div.dv-lvl-2.music-sign,
     div.dv-lvl-2.music-tracks-container {
         width: 100%;
