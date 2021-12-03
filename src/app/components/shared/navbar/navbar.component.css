@@ -14,10 +14,11 @@ div.dv-lvl-2.sections-navbar {
     margin: 0 auto;
     font-family: 'Bebas Neue', cursive;
     position: absolute;
+    z-index: 3;
 }
 
 div.dv-lvl-2.sections-navbar.music {
-    z-index: 1;
+    z-index: 3;
 }
 
 div.dv-lvl-3.upper-left-corner-logo {
@@ -178,11 +179,17 @@ ul.ul-lvl-4.social-media-list.contact li.li-lvl-5.social-media-item:hover {
         position: static;
         margin: 20px auto;
     }
+    div.dv-lvl-2.sections-navbar.music {
+        /* position: static; */
+        flex-flow: column;
+        margin: 0 auto;
+        z-index: 3;
+    }
     div.dv-lvl-2.sections-navbar {
         /* position: static; */
         flex-flow: column;
         margin: 0 auto;
-        z-index: 1;
+        z-index: 3;
     }
     div.dv-lvl-3.sections-container,
     div.dv-lvl-3.sections-container.music {

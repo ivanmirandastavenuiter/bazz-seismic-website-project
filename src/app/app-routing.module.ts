@@ -10,8 +10,8 @@ import { MusicComponent } from './components/custom/music/music.component';
 const routes: Routes = [
   { path: 'home', component: HomeComponent, data: { animation: 'HomePage'} },
   { path: 'gallery', component: GalleryComponent, data: { animation: 'GalleryPage' } },
-  { path: 'contact', component: ContactComponent },
-  { path: 'music', component: MusicComponent },
+  { path: 'contact', component: ContactComponent, data: { animation: 'ContactPage' } },
+  { path: 'music', component: MusicComponent, data: { animation: 'MusicPage' } },
   { path: '',   redirectTo: '/home', pathMatch: 'full' },
   { path: '**', redirectTo: '/home', pathMatch: 'full' }
 ];
