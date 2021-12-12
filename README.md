@@ -10,5 +10,6 @@
 **-> Last update [07-11]:** Vime player finally implemented. Mobile design completed.  
 **-> Last update [03-12]:** Animations completed for switching between sections.  
 **-> Last update [04-12]:** Gallery images hovering with semi-transparent white color.  
+**-> Last update [12-12]:** Added design for zoomed images pop up  
 
 💣
