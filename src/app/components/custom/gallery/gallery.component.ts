@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-gallery',
@@ -7,13 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GalleryComponent implements OnInit {
 
+  @ViewChild('darkOverlay') darkOverlay!: ElementRef;
+
   title: string = 'Gallery';
   previousPage: string = '/home';
   nextPage: string = '/music';
 
-  constructor() { }
+  constructor(private renderer: Renderer2) { }
 
   ngOnInit(): void {
+  }
+
+  ngAfterViewInit() {
+    console.log(this.darkOverlay.nativeElement);
+    console.log(this.renderer.selectRootElement(this.darkOverlay.nativeElement));
   }
 
 }
