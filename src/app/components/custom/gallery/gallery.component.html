@@ -1,8 +1,10 @@
 <!-- Top background container -->
 <div class="dv-lvl-0 background-container gallery">
 
+    <div #darkOverlayUpperGap class="dv-lvl-1 main-container dark-overlay-upper-gap"></div>
+
     <!-- Fix width container -->
-    <div class="dv-lvl-1 main-container">
+    <div #mainContainer class="dv-lvl-1 main-container">
 
         <!-- Dark layer on pop up for background -->
         <div #darkOverlay class="dv-lvl-2 main-container dark-overlay"></div>
@@ -10,10 +12,10 @@
         <!-- Gallery container -->
         <div class="dv-lvl-2 gallery-main-container">
 
-            <div class="dv-lvl-3 hidden-zoomed-image-container">
-                <img src="/assets/imgs/img-1.jpg" alt="bass-photo-1" class="img-lvl-4 image-zommed-panel">
+            <div #zoomedImageContainer class="dv-lvl-3 hidden-zoomed-image-container">
+                <img #zoomedImage src="" alt="bass-photo-1" class="img-lvl-4 image-zommed-panel">
                 <div class="dv-lvl-4 cross-box-container">
-                    <div class="dv-lvl-5 cross-box">
+                    <div class="dv-lvl-5 cross-box" (click)="closeImageOnCrossClick()">
                         X
                     </div>
                 </div>
@@ -28,67 +30,27 @@
             <div class="dv-lvl-3 gallery-container">
                 <div class="dv-lvl-4 gallery-row">
                     <div class="dv-lvl-5 gallery-column">
-                        <div class="dv-lvl-5 img-box">
-                            <img src="/assets/imgs/img-1.jpg" alt="bass-photo-1" class="img-lvl-6 gallery-image">
-                            <div class="dv-lvl-6 img-hover-cover"></div>
-                        </div>
-                        <div class="dv-lvl-5 img-box">
-                            <img src="/assets/imgs/img-2.jpg" alt="bass-photo-2" class="img-lvl-6 gallery-image">
-                            <div class="dv-lvl-6 img-hover-cover"></div>
-                        </div>
-                        <div class="dv-lvl-5 img-box">
-                            <img src="/assets/imgs/img-15.jpg" alt="bass-photo-4" class="img-lvl-6 gallery-image">
-                            <div class="dv-lvl-6 img-hover-cover"></div>
+                        <div *ngFor="let index of getImageSetOne()" class="dv-lvl-5 img-box">
+                            <img src="{{ imageSetOne[index] }}" alt="bass-photo-{{ index }}" class="img-lvl-6 gallery-image" />
+                            <div class="dv-lvl-6 img-hover-cover" (click)="show(imageSetOne[index])"></div>
                         </div>
                     </div>
                     <div class="dv-lvl-5 gallery-column">
-                        <div class="dv-lvl-5 img-box">
-                            <img src="/assets/imgs/img-5.jpg" alt="bass-photo-5" class="img-lvl-6 gallery-image">
-                            <div class="dv-lvl-6 img-hover-cover"></div>
-                        </div>
-                        <div class="dv-lvl-5 img-box">
-                            <img src="/assets/imgs/img-6.jpg" alt="bass-photo-6" class="img-lvl-6 gallery-image">
-                            <div class="dv-lvl-6 img-hover-cover"></div>
-                        </div>
-                        <div class="dv-lvl-5 img-box">
-                            <img src="/assets/imgs/img-7.jpg" alt="bass-photo-7" class="img-lvl-6 gallery-image">
-                            <div class="dv-lvl-6 img-hover-cover"></div>
-                        </div>
-                        <div class="dv-lvl-5 img-box">
-                            <img src="/assets/imgs/img-12.jpg" alt="bass-photo-8" class="img-lvl-6 gallery-image">
-                            <div class="dv-lvl-6 img-hover-cover"></div>
+                        <div *ngFor="let index of getImageSetTwo()" class="dv-lvl-5 img-box">
+                            <img src="{{ imageSetTwo[index] }}" alt="bass-photo-{{ index }}" class="img-lvl-6 gallery-image">
+                            <div class="dv-lvl-6 img-hover-cover" (click)="show(imageSetTwo[index])"></div>
                         </div>
                     </div>
                     <div class="dv-lvl-5 gallery-column">
-                        <div class="dv-lvl-5 img-box">
-                            <img src="/assets/imgs/img-9.jpg" alt="bass-photo-9" class="img-lvl-6 gallery-image">
-                            <div class="dv-lvl-6 img-hover-cover"></div>
-                        </div>
-                        <div class="dv-lvl-5 img-box">
-                            <img src="/assets/imgs/img-10.jpg" alt="bass-photo-10" class="img-lvl-6 gallery-image">
-                            <div class="dv-lvl-6 img-hover-cover"></div>
-                        </div>
-                        <div class="dv-lvl-5 img-box">
-                            <img src="/assets/imgs/img-11.jpg" alt="bass-photo-11" class="img-lvl-6 gallery-image">
-                            <div class="dv-lvl-6 img-hover-cover"></div>
-                        </div>
-                        <div class="dv-lvl-5 img-box">
-                            <img src="/assets/imgs/img-8.jpg" alt="bass-photo-12" class="img-lvl-6 gallery-image">
-                            <div class="dv-lvl-6 img-hover-cover"></div>
+                        <div *ngFor="let index of getImageSetThree()" class="dv-lvl-5 img-box">
+                            <img src="{{ imageSetThree[index] }}" alt="bass-photo-{{ index }}" class="img-lvl-6 gallery-image">
+                            <div class="dv-lvl-6 img-hover-cover" (click)="show(imageSetThree[index])"></div>
                         </div>
                     </div>
                     <div class="dv-lvl-5 gallery-column">
-                        <div class="dv-lvl-5 img-box">
-                            <img src="/assets/imgs/img-13.jpg" alt="bass-photo-13" class="img-lvl-6 gallery-image">
-                            <div class="dv-lvl-6 img-hover-cover"></div>
-                        </div>
-                        <div class="dv-lvl-5 img-box">
-                            <img src="/assets/imgs/img-14.jpg" alt="bass-photo-14" class="img-lvl-6 gallery-image">
-                            <div class="dv-lvl-6 img-hover-cover"></div>
-                        </div>
-                        <div class="dv-lvl-5 img-box">
-                            <img src="/assets/imgs/img-4.jpg" alt="bass-photo-15" class="img-lvl-6 gallery-image">
-                            <div class="dv-lvl-6 img-hover-cover"></div>
+                        <div *ngFor="let index of getImageSetFour()" class="dv-lvl-5 img-box">
+                            <img src="{{ imageSetFour[index] }}" alt="bass-photo-{{ index }}" class="img-lvl-6 gallery-image">
+                            <div class="dv-lvl-6 img-hover-cover" (click)="show(imageSetFour[index])"></div>
                         </div>
                     </div>
                 </div>

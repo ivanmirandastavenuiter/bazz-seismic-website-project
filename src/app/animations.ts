@@ -47,7 +47,7 @@ export const slideInAnimation =
           position: 'absolute',
           top: 0,
           right: 0,
-          width: '100%'
+          width: '100%',
         })
       ]),
       query(':enter', [
@@ -64,7 +64,8 @@ export const slideInAnimation =
       query('div.dv-lvl-0.background-container.home', [
         style({ 
           height: '100vh',
-          overflow: 'hidden'
+          overflow: 'hidden',
+          zIndex: 2
         })
       ]),
       query(':leave',  animateChild()),

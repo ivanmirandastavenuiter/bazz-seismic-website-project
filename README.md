@@ -11,5 +11,6 @@
 **-> Last update [03-12]:** Animations completed for switching between sections.  
 **-> Last update [04-12]:** Gallery images hovering with semi-transparent white color.  
 **-> Last update [12-12]:** Added design for zoomed images pop up  
+**-> Last update [18-12]:** UX gallery interaction completed. Errors fixed. Probably v0.0.0 ready!!!  
 
 💣
