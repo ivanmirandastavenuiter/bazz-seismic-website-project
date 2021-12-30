@@ -12,5 +12,6 @@
 **-> Last update [04-12]:** Gallery images hovering with semi-transparent white color.  
 **-> Last update [12-12]:** Added design for zoomed images pop up  
 **-> Last update [18-12]:** UX gallery interaction completed. Errors fixed. Probably v0.0.0 ready!!!  
+**-> Last update [29-12]:** Dockerfile and nginx conf files added for deployment handling / Routing problem solved at nginx deployment with docker / Fixes at switching buttons / Favicon added /  Extremely sensuality <3  
 
-💣
+💣:lipstick::high_heel:

@@ -85,6 +85,7 @@ div.dv-lvl-3.button-right {
     font-size: 1.3em;
     color: #fff;
     box-shadow: 0 0 8px -2px #ceb40e;
+    cursor: pointer;
 }
 
 div.dv-lvl-3.button-left a,

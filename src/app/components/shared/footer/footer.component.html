@@ -10,15 +10,11 @@
     <!-- Switch section buttons -->
     <div [ngClass]="['dv-lvl-2', 'switch-section-buttons', currentSection | lowercase ]">
 
-        <div class="dv-lvl-3 button-left">
-            <a [routerLink]="[ previousPage ]">
-                <i class="fas fa-chevron-left"></i>
-            </a>
+        <div [routerLink]="[ previousPage ]" class="dv-lvl-3 button-left">
+            <i class="fas fa-chevron-left"></i>
         </div>
-        <div class="dv-lvl-3 button-right">
-            <a [routerLink]="[ nextPage ]">
-                <i class="fas fa-chevron-right"></i>
-            </a>
+        <div [routerLink]="[ nextPage ]" class="dv-lvl-3 button-right">
+            <i class="fas fa-chevron-right"></i>
         </div>
 
     </div>
