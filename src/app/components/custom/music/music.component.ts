@@ -4,7 +4,7 @@ import { Player } from '@vime/angular';
 @Component({
   selector: 'app-music',
   templateUrl: './music.component.html',
-  styleUrls: ['./music.component.css']
+  styleUrls: ['./music.component.scss']
 })
 export class MusicComponent implements OnInit {
 

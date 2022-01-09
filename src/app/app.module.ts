@@ -28,7 +28,7 @@ import { MusicModule } from './components/custom/music/music.module';
     VimeModule,
     MusicModule
   ],
-  providers: [],
+  providers: [{ provide: Window, useValue: window } ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

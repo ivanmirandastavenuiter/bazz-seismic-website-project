@@ -1,17 +1,21 @@
-import { Component, ElementRef, HostListener, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { Component, ElementRef, HostListener, OnChanges, OnInit, QueryList, Renderer2, SimpleChanges, ViewChild, ViewChildren } from '@angular/core';
+import { HomeComponent } from '../home/home.component';
 
 @Component({
   selector: 'app-gallery',
   templateUrl: './gallery.component.html',
-  styleUrls: ['./gallery.component.css']
+  styleUrls: ['./gallery.component.scss']
 })
 export class GalleryComponent implements OnInit {
 
   @ViewChild('darkOverlay') darkOverlay!: ElementRef;
   @ViewChild('darkOverlayUpperGap') darkOverlayUpperGap!: ElementRef;
+  @ViewChild('crossContainer') crossContainer!: ElementRef;
   @ViewChild('zoomedImage') zoomedImage!: ElementRef;
   @ViewChild('zoomedImageContainer') zoomedImageContainer!: ElementRef;
   @ViewChild('mainContainer') mainContainer!: ElementRef;
+
+  isImageOpen: boolean = false;
 
   @HostListener('window:keydown.escape', ['$event'])
   handleEscapeKeyDown(event: KeyboardEvent) {
@@ -48,9 +52,10 @@ export class GalleryComponent implements OnInit {
     2: '/assets/imgs/img-4.jpg'
   }
 
-  constructor(private renderer: Renderer2) { }
+  constructor(private renderer: Renderer2, private window: Window) { }
 
   ngOnInit(): void {
+    this.setHeightForZoomedImagesOnResize();
   }
 
   public getImageSetOne() {
@@ -70,21 +75,41 @@ export class GalleryComponent implements OnInit {
   }
 
   public show(url: string) {
+    // Control open-close flag
+    this.isImageOpen = true;
+
     // First set the img tag src attribute, so we assure image url is set
     this.renderer.setAttribute(this.zoomedImage.nativeElement, 'src', url);
 
+    // Oh god what a hack: needed to calculate correct height. Otherwise -> nightmare
+    this.renderer.addClass(this.zoomedImageContainer.nativeElement, 'show-with-block');
+
+    // Get parent container height (hack is also making this working - What a combo hack LoKO!)
+    const containerHeight = this.zoomedImageContainer.nativeElement.clientHeight;
+
     // Get the img height to select display flex or block (behaves different)
-    const imgHeight = this.zoomedImage.nativeElement.height;
+    let imgHeight = this.zoomedImage.nativeElement.height;
+
+    // Patch the hack :)
+    this.renderer.removeClass(this.zoomedImageContainer.nativeElement, 'show-with-block');
 
     // Second, set dark overlay for background
     this.renderer.addClass(this.darkOverlay.nativeElement, 'show');
     this.renderer.addClass(this.darkOverlayUpperGap.nativeElement, 'show');
 
     // Last, we show the container that is hidden for zoomed image
-    this.renderer.addClass(this.zoomedImageContainer.nativeElement, imgHeight >= 600 ? 'show-with-block' : 'show-with-flex' );
+    this.renderer.addClass(this.zoomedImageContainer.nativeElement, imgHeight >= containerHeight ? 'show-with-block' : 'show-with-flex' );
+
+    //Set the cross container height equal to image height (if wide enough)
+    if (window.innerWidth >= 1255) {
+      this.renderer.setStyle(this.crossContainer.nativeElement, 'height', `calc(${imgHeight.toString()}px - 25px)`);
+    } else {
+      this.renderer.setStyle(this.crossContainer.nativeElement, 'height', '80%');
+    }
 
     // One last thing else: set main container z-index to 1, so footer is on background
     this.renderer.addClass(this.mainContainer.nativeElement, 'overlap-on-footer');
+
   }
 
   private closeZoomedImage() {
@@ -96,12 +121,38 @@ export class GalleryComponent implements OnInit {
 
     // And restore 0 z-index for main container
     this.renderer.removeClass(this.mainContainer.nativeElement, 'overlap-on-footer');
+
+    // Control open-close flag
+    this.isImageOpen = false;
   }
 
   public closeImageOnCrossClick() {
     this.closeZoomedImage();
   }
 
+  private setHeightForZoomedImagesOnResize() {
+    this.window.onresize = () => {
+      if (this.isImageOpen) {
 
+        // Get parent container height
+        const containerHeight = this.zoomedImageContainer.nativeElement.clientHeight;
+        // Get the image height 
+        const imgHeight = this.zoomedImage.nativeElement.height;
+        
+        // Cure in health
+        this.renderer.removeClass(this.zoomedImageContainer.nativeElement, 'show-with-block');
+        this.renderer.removeClass(this.zoomedImageContainer.nativeElement, 'show-with-flex');
+  
+        this.renderer.addClass(this.zoomedImageContainer.nativeElement, imgHeight >= containerHeight ? 'show-with-block' : 'show-with-flex' );
+      
+        //Set the cross container height equal to image height (if wide enough)
+        if (window.innerWidth >= 1255) {
+          this.renderer.setStyle(this.crossContainer.nativeElement, 'height', `calc(${imgHeight.toString()}px - 25px)`);
+        } else {
+          this.renderer.setStyle(this.crossContainer.nativeElement, 'height', '80%');
+        }
+      }
+    }
+  }
 
 }

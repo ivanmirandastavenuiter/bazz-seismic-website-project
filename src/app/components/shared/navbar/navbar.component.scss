@@ -1,20 +1,33 @@
+:root {
+    --navbar-z-index: 3;
+    --on-home-sections-hover: #797168;
+    --on-gallery-sections-hover: #b9590a;
+    --on-music-sections-hover: #797168;
+    --on-contact-sections-hover: #d70127;
+    --centered-margin-on-responsive: 20px auto;
+    --list-item-margin-on-responsive: 10px;
+    --list-item-padding-left-on-responsive: 7px;
+    --social-media-margin-on-responsive: 10px auto;
+    --logo-width-on-responsive: 80%;
+}
+
 :host {
     display: flex;
     justify-content: center;
-    width: 100vw;
+    width: var(--max-viewport-width);
+    min-width: var(--min-overall-width);
 }
 
 div.dv-lvl-2.sections-navbar {
-    width: 1535px;
-    /* top: 20px;
-    right: 0; */
-    display: flex;
-    padding-top: 20px;
-    justify-content: flex-end;
-    margin: 0 auto;
-    font-family: 'Bebas Neue', cursive;
     position: absolute;
-    z-index: 3;
+    padding-top: 20px;
+    width: var(--fixed-overall-width);
+    min-width: var(--min-overall-width);
+    margin: var(--centered-margin-zero-vertical);
+    font-family: var(--main-font-family);
+    z-index: var(--navbar-z-index);
+    display: flex;
+    justify-content: flex-end;
 }
 
 div.dv-lvl-2.sections-navbar.music {

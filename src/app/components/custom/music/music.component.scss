@@ -291,6 +291,12 @@ div.dv-lvl-intermediate.controls-container {
     }
 }
 
+@media screen and (max-width: 400px) {
+    div.dv-lvl-3.sign-letters-container {
+        width: 275px;
+    }
+}
+
 @media screen and (min-height: 1000px) {
     div.dv-lvl-2.switch-section-buttons {
         position: absolute;
@@ -311,5 +317,14 @@ div.dv-lvl-intermediate.controls-container {
     div.dv-lvl-2.music-sign,
     div.dv-lvl-2.music-tracks-container {
         width: 100%;
+    }
+}
+
+@media screen and (max-width: 476px) and (min-height: 1400px) {
+    div.dv-lvl-0.background-container.music {
+        height: 100vh;
+    }
+    div.dv-lvl-1.main-container {
+        height: auto;
     }
 }

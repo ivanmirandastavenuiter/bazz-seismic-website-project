@@ -17,7 +17,7 @@ div.dv-lvl-1.main-container {
     z-index: 0;
     position: relative;
     width: 1535px;
-    min-width: 150px;
+    min-width: 300px;
     /* height: 100%; */
     margin: 0 auto;
     padding: 0;
@@ -55,7 +55,7 @@ p.par-lvl-3.sign-letters {
 
 div.dv-lvl-2.contact-container {
     width: 70%;
-    min-width: 300px;
+    min-width: 290px;
     border: 1px solid #000;
     position: relative;
     margin: 0 auto;
@@ -565,5 +565,11 @@ div.dv-lvl-4.contact-details-icons {
 @media screen and (min-height: 1500px) {
     div.dv-lvl-0.background-container {
         height: 100vh;
+    }
+}
+
+@media screen and (max-width: 476px) and (min-height: 1400px) {
+    div.dv-lvl-1.main-container {
+        height: auto;
     }
 }

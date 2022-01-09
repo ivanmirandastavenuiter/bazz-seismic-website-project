@@ -1,0 +1,34 @@
+/* You can add global styles to this file, and also import other style files */
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+
+/*
+
+Reminder: 
+
+1. Set global variables
+2. Think about mixins
+3. Apply css with nesting (also hovers and so on)
+
+*/
+
+:root {
+    --max-viewport-width: 100vw;
+    --min-overall-width: 300px;
+    --fixed-overall-width: 1535px;
+    --centered-margin-zero-vertical: 0 auto;
+    --main-font-family: 'Bebas Neue', cursive;
+    --regular-border-white: 1px solid #fff;
+    --regular-border-black: 1px solid #000;
+    --regular-box-sizing: 'border-box';
+    --regular-white-background: #fff;
+    --regular-white-color: #fff;
+    --regular-black-color: #000;
+    --regular-cursor-behaviour: pointer;
+    --max-width: 100%;
+    --regular-text-align: center;
+}

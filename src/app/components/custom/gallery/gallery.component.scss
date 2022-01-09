@@ -2,7 +2,7 @@ div.dv-lvl-0.background-container {
     position: relative;
     /* z-index: -2; */
     width: 100vw;
-    min-width: 250px;
+    min-width: 300px;
     background-image: url('/assets/imgs/mixer.jpg');
     background-position: 50% 50%;
     background-repeat: no-repeat;
@@ -146,7 +146,6 @@ div.dv-lvl-3.hidden-zoomed-image-container.show-with-block {
 }
 
 div.dv-lvl-4.cross-box-container {
-    height: 100%;
     position: absolute;
     top: 25px;
     right: 25px;
@@ -234,6 +233,12 @@ img.img-lvl-4.image-zommed-panel {
     }
 }
 
+@media screen and (max-width: 1255px) {
+    div.dv-lvl-4.cross-box-container {
+        height: 100%;
+    }
+}
+
 @media screen and (max-width: 1200px) {
     div.dv-lvl-2.gallery-main-container {
         display: block;
@@ -289,11 +294,6 @@ img.img-lvl-4.image-zommed-panel {
         flex: 100%;
         max-width: 100%;
     }
-    div.dv-lvl-3.hidden-zoomed-image-container.show-with-block {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
 }
 
 @media screen and (max-width: 500px) {
@@ -310,5 +310,11 @@ img.img-lvl-4.image-zommed-panel {
     p.par-lvl-4.sign-letters {
         letter-spacing: 0;
         padding: 0;
+    }
+}
+
+@media screen and (max-width: 476px) and (min-height: 1400px) {
+    div.dv-lvl-0.background-container.gallery {
+        height: auto;
     }
 }
