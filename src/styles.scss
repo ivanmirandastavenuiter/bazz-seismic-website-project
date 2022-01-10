@@ -26,9 +26,41 @@ Reminder:
     --regular-border-black: 1px solid #000;
     --regular-box-sizing: 'border-box';
     --regular-white-background: #fff;
+    --regular-black-background: #000;
     --regular-white-color: #fff;
     --regular-black-color: #000;
     --regular-cursor-behaviour: pointer;
     --max-width: 100%;
     --regular-text-align: center;
+}
+
+@mixin flex-center-only-justify() {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin flex-end-only-justify() {
+    display: flex;
+    justify-content: flex-end;
+}
+
+@mixin flex-only {
+    display: flex;
+}
+
+@mixin flex-center-justify-and-align() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-space-around-only-justify() {
+    display: flex;
+    justify-content: space-around;
+}
+
+@mixin flex-justify-start-align-center() {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
