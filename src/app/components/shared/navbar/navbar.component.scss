@@ -262,9 +262,11 @@ div.dv-lvl-2.sections-navbar {
 }
 
 @media screen and (max-width: 476px) {
-    div.dv-lvl-3.upper-left-corner-logo,
-    div.dv-lvl-3.upper-left-corner-logo.contact,
-    div.dv-lvl-3.upper-left-corner-logo.music {
-        width: var(--logo-width-on-responsive);
+    div.dv-lvl-2.sections-navbar {
+        div.dv-lvl-3.upper-left-corner-logo,
+        div.dv-lvl-3.upper-left-corner-logo.contact,
+        div.dv-lvl-3.upper-left-corner-logo.music {
+            width: var(--logo-width-on-responsive);
+        }
     }
 }

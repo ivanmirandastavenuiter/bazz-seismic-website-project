@@ -1,136 +1,161 @@
+@use 'src/styles.scss';
+
 :host {
-    display: flex;
-    justify-content: center;
-    width: 100vw;
-    height: 100%;
+    --fixed-border-decorator-width: 1px;
+    --fixed-border-decorator-height: 1px;
+    --main-footer-font-size: 1.3em;
+}
+
+:host {
+    @include styles.flex-center-only-justify();
     position: relative;
-    min-width: 300px;
+    min-width: var(--min-overall-width);
+    width: var(--max-viewport-width);
+    height: var(--max-height);
 }
 
-div.dv-lvl-2.footer-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 1535px;
-    margin-bottom: 1.3em;
-    font-family: 'Bebas Neue', cursive;
-}
-
-div.dv-lvl-2.footer-container.gallery {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 1535px;
-    min-width: 300px;
-    margin-bottom: 1.3em;
-    position: absolute;
-    bottom: 0;
-}
-
-div.dv-lvl-2.footer-container.contact {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 1535px;
-    margin: 1.3em 0;
-    position: absolute;
-    bottom: 0;
-}
-
-div.dv-lvl-2.footer-container.music {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 1535px;
-    margin: 1.3em 0;
-    position: absolute;
-    bottom: 0;
-}
-
-div.dv-lvl-2.bass-sign-container {
-    width: 100px;
-}
-
-div.dv-lvl-4.bass-sign-border {
-    width: 58%;
-    height: 1px;
-    background: #fff;
-    position: relative;
-    top: 18px;
-    right: 10px;
-}
-
-p.par-lvl-3.bass-letters,
-p.par-lvl-3.seismic-letters {
-    color: #fff;
-    font-size: .7em;
-    letter-spacing: 7px;
-}
-
-div.dv-lvl-2.switch-section-buttons {
-    width: 200px;
-    position: static;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-div.dv-lvl-3.button-left,
-div.dv-lvl-3.button-right {
-    background: #f4eee4;
+@mixin fixed-button-values() {
+    @include styles.flex-center-justify-and-align();
     width: 50px;
     height: 50px;
     border-radius: 50%;
     margin: .5em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.3em;
-    cursor: pointer;
+    font-size: var(--main-footer-font-size);
+    cursor: var(--regular-cursor-behaviour);
 }
 
-div.dv-lvl-2.switch-section-buttons.gallery div.dv-lvl-3.button-left,
-div.dv-lvl-2.switch-section-buttons.gallery div.dv-lvl-3.button-right {
+@mixin gallery-colors() {
     box-shadow: 0 0 8px -2px #e97719;
     color: #e97719;
 }
 
-div.dv-lvl-2.switch-section-buttons.music div.dv-lvl-3.button-left,
-div.dv-lvl-2.switch-section-buttons.music div.dv-lvl-3.button-right {
+@mixin music-colors() {
     box-shadow: 0 0 8px -2px #797168;
     color: #797168;
 }
 
-div.dv-lvl-2.switch-section-buttons.contact div.dv-lvl-3.button-left,
-div.dv-lvl-2.switch-section-buttons.contact div.dv-lvl-3.button-right {
+@mixin contact-colors() {
     box-shadow: 0 0 8px -2px #d70127;
     color: #d70127;
 }
 
-div.dv-lvl-4.seismic-sign-border {
-    width: 100px;
-    height: 1px;
-    background: #fff;
-    position: relative;
-    top: 18px;
-    right: 17px;
+div.dv-lvl-2.footer-container {
+    @include styles.flex-space-around-justify-align-center();
+    margin-bottom: 1.3em;
+    width: var(--fixed-overall-width);
+    font-family: var(--main-font-family);
+
+    div.dv-lvl-2.bass-sign-container {
+        width: 100px;
+
+        div.dv-lvl-4.bass-sign-border {
+            position: relative;
+            top: 18px;
+            right: 10px;
+            width: 58%;
+            height: var(--fixed-border-decorator-height);
+            background: var(--regular-white-background);
+        }
+
+        p.par-lvl-3.bass-letters {
+            font-size: .7em;
+            letter-spacing: 7px;
+            color: var(--regular-white-color);
+        }
+    }
+
+    div.dv-lvl-2.switch-section-buttons {
+        @include styles.flex-center-justify-and-align();
+        position: static;
+        width: 200px;
+        
+        div.dv-lvl-3.button-left,
+        div.dv-lvl-3.button-right {
+            @include fixed-button-values();
+            background: #f4eee4;
+        }
+
+    }
+
+    div.dv-lvl-2.switch-section-buttons.gallery {
+        div.dv-lvl-3.button-left,
+        div.dv-lvl-3.button-right {
+            @include gallery-colors();
+        }
+    }
+
+    div.dv-lvl-2.switch-section-buttons.music {
+        div.dv-lvl-3.button-left,
+        div.dv-lvl-3.button-right {
+            @include music-colors();
+        }
+    }
+
+    div.dv-lvl-2.switch-section-buttons.contact {
+        div.dv-lvl-3.button-left,
+        div.dv-lvl-3.button-right {
+            @include contact-colors();
+        }
+    }
+
+    div.dv-lvl-2.seismic-sign-container {
+        p.par-lvl-3.seismic-letters {
+            font-size: .7em;
+            letter-spacing: 7px;
+            color: var(--regular-white-color);
+        }
+
+        div.dv-lvl-4.seismic-sign-border {
+            position: relative; 
+            top: 18px;
+            right: 17px;
+            width: 100px;
+            height: var(--fixed-border-decorator-height);
+            background: var(--regular-white-background);
+        }
+    }
+}
+
+div.dv-lvl-2.footer-container.gallery {
+    @include styles.flex-space-around-justify-align-center();
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 1.3em;
+    width: var(--fixed-overall-width);
+    min-width: var(--min-overall-width);
+}
+
+div.dv-lvl-2.footer-container.contact {
+    @include styles.flex-space-around-justify-align-center();
+    position: absolute;
+    bottom: 0;
+    margin: 1.3em 0;
+    width: var(--fixed-overall-width);
+}
+
+div.dv-lvl-2.footer-container.music {
+    @include styles.flex-space-around-justify-align-center();
+    position: absolute;
+    bottom: 0;
+    margin: 1.3em 0;
+    width: var(--fixed-overall-width);
 }
 
 @media screen and (max-width: 1534px),
 (max-height: 700px) {
     div.dv-lvl-2.footer-container {
-        width: 100%;
+        width: var(--max-width);
         margin: 1.3em 0;
+        div.dv-lvl-2.switch-section-buttons {
+            position: static;
+        }
     }
     div.dv-lvl-2.footer-container.gallery {
-        width: 100%;
+        width: var(--max-width);
     }
     div.dv-lvl-2.footer-container.contact,
     div.dv-lvl-2.footer-container.music {
-        width: 100%;
-    }
-    div.dv-lvl-2.switch-section-buttons {
-        position: static;
+        width: var(--max-width);
     }
 }
 
@@ -139,33 +164,42 @@ div.dv-lvl-4.seismic-sign-border {
     div.dv-lvl-2.footer-container.contact {
         flex-flow: column;
     }
-    div.dv-lvl-4.bass-sign-border {
-        left: 15px;
-    }
-    div.dv-lvl-4.seismic-sign-border {
-        right: 5px;
-    }
-    p.par-lvl-3.bass-letters,
-    p.par-lvl-3.seismic-letters {
-        text-align: center;
+    div.dv-lvl-2.footer-container {
+        div.dv-lvl-2.bass-sign-container {
+            p.par-lvl-3.bass-letters {
+                text-align: var(--regular-text-align);
+            }
+            div.dv-lvl-4.bass-sign-border {
+                left: 15px;
+            }
+        }
+        div.dv-lvl-2.seismic-sign-container {
+            p.par-lvl-3.seismic-letters {
+                text-align: var(--regular-text-align);
+            }
+            div.dv-lvl-4.seismic-sign-border {
+                right: 5px;
+            }
+        }
     }
 }
 
 @media screen and (min-height: 1200px) {
-    div.dv-lvl-0.background-container {
-        height: 100vh;
-    }
-    div.dv-lvl-2.switch-section-buttons {
-        position: absolute;
-        right: 0;
-        left: 0;
-        bottom: 0;
-        margin: auto;
+    div.dv-lvl-2.footer-container {
+        div.dv-lvl-2.switch-section-buttons {
+            position: absolute;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            margin: auto;
+        }
     }
 }
 
 @media screen and (max-width: 476px) and (min-height: 1400px) {
-    div.dv-lvl-2.switch-section-buttons {
-        position: static;
+    div.dv-lvl-2.footer-container {
+        div.dv-lvl-2.switch-section-buttons {
+            position: static;
+        }
     }
 }

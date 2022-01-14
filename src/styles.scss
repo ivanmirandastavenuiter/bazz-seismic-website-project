@@ -18,6 +18,7 @@ Reminder:
 
 :root {
     --max-viewport-width: 100vw;
+    --max-viewport-height: 100vw;
     --min-overall-width: 300px;
     --fixed-overall-width: 1535px;
     --centered-margin-zero-vertical: 0 auto;
@@ -31,6 +32,7 @@ Reminder:
     --regular-black-color: #000;
     --regular-cursor-behaviour: pointer;
     --max-width: 100%;
+    --max-height: 100%;
     --regular-text-align: center;
 }
 
@@ -57,6 +59,12 @@ Reminder:
 @mixin flex-space-around-only-justify() {
     display: flex;
     justify-content: space-around;
+}
+
+@mixin flex-space-around-justify-align-center() {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 @mixin flex-justify-start-align-center() {
