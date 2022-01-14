@@ -18,14 +18,14 @@ Reminder:
 
 :root {
     --max-viewport-width: 100vw;
-    --max-viewport-height: 100vw;
+    --max-viewport-height: 100vh;
     --min-overall-width: 300px;
     --fixed-overall-width: 1535px;
     --centered-margin-zero-vertical: 0 auto;
     --main-font-family: 'Bebas Neue', cursive;
     --regular-border-white: 1px solid #fff;
     --regular-border-black: 1px solid #000;
-    --regular-box-sizing: 'border-box';
+    --regular-box-sizing: border-box;
     --regular-white-background: #fff;
     --regular-black-background: #000;
     --regular-white-color: #fff;
@@ -71,4 +71,25 @@ Reminder:
     display: flex;
     justify-content: flex-start;
     align-items: center;
+}
+
+@mixin background-container-setup($url) {
+    position: relative;
+    width: var(--max-viewport-width);
+    min-width: var(--min-overall-width);
+    background-image: url($url);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0;
+    float: left;
+    clear: both;
+}
+
+@mixin main-container-setup {
+    position: relative;
+    z-index: 0;
+    padding: 0;
+    width: var(--fixed-overall-width);
+    font-family: var(--main-font-family);
 }
