@@ -6,12 +6,11 @@
 }
 
 div.dv-lvl-0.background-container {
-    @include styles.fixed-background-container-props('/assets/imgs/concert.jpg');
-    position: relative;
+    @include styles.background-container-setup('/assets/imgs/concert.jpg');
     z-index: var(--home-background-container-z-index);
     height: var(--max-viewport-height);
     div.dv-lvl-1.main-container {
-        @include styles.fixed-main-container-props();
+        @include styles.main-container-setup();
         min-width: var(--min-overall-width);
         height: var(--max-height);
         div.dv-lvl-2.blur-layer {
@@ -24,74 +23,66 @@ div.dv-lvl-0.background-container {
             margin: var(--centered-margin-zero-vertical);
             z-index: var(--home-blur-layer-z-index);
             height: var(--max-width);
+            p.par-lvl-3.bass-paragraph {
+                position: relative;
+                margin: 0;
+                padding: 0;
+                top: 123px;
+                left: 423px;
+                background-image: url('/assets/imgs/concert.jpg');
+                background-position: 50% 50%;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-attachment: fixed;
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-size: 7.5em;
+            }
+            p.par-lvl-3.seismic-paragraph {
+                position: relative;
+                top: 67px;
+                left: 617px;
+                margin: 0;
+                padding: 0;
+                font-size: 4.5em;
+                color: var(--regular-white-color);
+            }
+            div.dv-lvl-2.presentation-card {
+                @include styles.flex-only();
+                position: absolute;
+                width: 500px;
+                height: 300px;
+                bottom: 70px;
+                left: 70px;
+                margin-bottom: -1px;
+                border: var(--regular-border-white);
+                box-sizing: var(--regular-box-sizing);
+                div.dv-lvl-3.card-index {
+                    width: 15%;
+                    border-right: var(--regular-border-white);
+                    box-sizing: var(--regular-box-sizing);
+                    div.dv-lvl-4.card-index-number {
+                        @include styles.flex-center-justify-and-align();
+                        height: 50px;
+                        width: var(--max-width);
+                        background: var(--regular-white-background);
+                        font-size: var(--home-main-font-size);
+                    }
+                }
+                div.dv-lvl-3.card-content {
+                    width: 85%;
+                    h1.he-lvl-4.card-header,
+                    p.par-lvl-4.card-text {
+                        padding: 0 20px 0 20px;
+                    }
+                    p.par-lvl-4.card-text {
+                        text-align: justify;
+                    }
+                }
+            }
         }
     }
-}
-
-p.par-lvl-3.bass-paragraph {
-    position: relative;
-    margin: 0;
-    padding: 0;
-    top: 123px;
-    left: 423px;
-    background-image: url('/assets/imgs/concert.jpg');
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 7.5em;
-}
-
-p.par-lvl-3.seismic-paragraph {
-    position: relative;
-    top: 67px;
-    left: 617px;
-    margin: 0;
-    padding: 0;
-    font-size: 4.5em;
-    color: var(--regular-white-color);
-}
-
-div.dv-lvl-2.presentation-card {
-    @include styles.flex-only();
-    position: absolute;
-    width: 500px;
-    height: 300px;
-    bottom: 70px;
-    left: 70px;
-    margin-bottom: -1px;
-    border: var(--regular-border-white);
-    box-sizing: var(--regular-box-sizing);
-}
-
-div.dv-lvl-3.card-index {
-    width: 15%;
-    border-right: var(--regular-border-white);
-    box-sizing: var(--regular-box-sizing);
-}
-
-div.dv-lvl-4.card-index-number {
-    @include styles.flex-center-justify-and-align();
-    height: 50px;
-    width: var(--max-width);
-    background: var(--regular-white-background);
-    font-size: var(--home-main-font-size);
-}
-
-div.dv-lvl-3.card-content {
-    width: 85%;
-}
-
-h1.he-lvl-4.card-header,
-p.par-lvl-4.card-text {
-    padding: 0 20px 0 20px;
-}
-
-p.par-lvl-4.card-text {
-    text-align: justify;
 }
 
 @media screen and (max-width: 1534px),
@@ -105,65 +96,92 @@ p.par-lvl-4.card-text {
             margin: 420px auto 0 auto;
             width: var(--max-viewport-width);
             height: var(--max-height);
+            div.dv-lvl-2.blur-layer {
+                position: static;
+                padding: .1px;
+                p.par-lvl-3.bass-paragraph,
+                p.par-lvl-3.seismic-paragraph {
+                    position: static;
+                    text-align: var(--regular-text-align);
+                }
+                div.dv-lvl-2.presentation-card {
+                    position: static;
+                    margin: 20px auto;
+                }
+            }
         }
-    }
-    div.dv-lvl-2.blur-layer {
-        position: static;
-        padding: .1px;
-    }
-    p.par-lvl-3.bass-paragraph,
-    p.par-lvl-3.seismic-paragraph {
-        position: static;
-        text-align: var(--regular-text-align);
-    }
-    div.dv-lvl-2.presentation-card {
-        position: static;
-        margin: 20px auto;
     }
 }
 
 @media screen and (max-width: 1300px) {
-    div.dv-lvl-2.blur-layer {
-        width: 60%;
+    div.dv-lvl-0.background-container {
+        div.dv-lvl-1.main-container {
+            div.dv-lvl-2.blur-layer {
+                width: 60%;
+            }
+        }
     }
 }
 
 @media screen and (max-width: 900px) {
-    div.dv-lvl-2.blur-layer {
-        width: 80%;
+    div.dv-lvl-0.background-container {
+        div.dv-lvl-1.main-container {
+            div.dv-lvl-2.blur-layer {
+                width: 80%;
+            }
+        }
     }
 }
 
 @media screen and (max-width: 700px) {
-    div.dv-lvl-2.presentation-card {
-        flex-flow: column;
-        width: 90%;
-        height: auto;
-    }
-    div.dv-lvl-3.card-index {
-        @include styles.flex-only();
-        background: var(--regular-white-background);
-        margin: var(--centered-margin-zero-vertical);
-    }
-    div.dv-lvl-3.card-content {
-        margin: var(--centered-margin-zero-vertical);
-    }
-    h1.he-lvl-4.card-header {
-        text-align: var(--regular-text-align);
+    div.dv-lvl-0.background-container {
+        div.dv-lvl-1.main-container {
+            div.dv-lvl-2.blur-layer {
+                div.dv-lvl-2.presentation-card {
+                    flex-flow: column;
+                    width: 90%;
+                    height: auto;
+                    div.dv-lvl-3.card-index {
+                        @include styles.flex-only();
+                        background: var(--regular-white-background);
+                        margin: var(--centered-margin-zero-vertical);
+                    }
+                    div.dv-lvl-3.card-content {
+                        margin: var(--centered-margin-zero-vertical);
+                        h1.he-lvl-4.card-header {
+                            text-align: var(--regular-text-align);
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
 @media screen and (max-width: 476px) {
-    div.dv-lvl-3.card-index {
-        width: 20%;
+    div.dv-lvl-0.background-container {
+        div.dv-lvl-1.main-container {
+            div.dv-lvl-2.blur-layer {
+                div.dv-lvl-2.presentation-card {
+                    div.dv-lvl-3.card-index {
+                        width: 20%;
+                    }
+                }
+            }
+        }
     }
 }
 
 @media screen and (max-width: 476px) and (min-height: 1400px) {
     div.dv-lvl-0.background-container.home {
         height: var(--max-viewport-height);
+        div.dv-lvl-1.main-container {
+            height: auto;
+        }
     }
-    div.dv-lvl-1.main-container {
-        height: auto;
+    div.dv-lvl-0.background-container {
+        div.dv-lvl-1.main-container {
+            height: auto;
+        }
     }
 }
