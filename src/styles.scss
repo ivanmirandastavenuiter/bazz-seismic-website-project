@@ -25,7 +25,7 @@ Reminder:
     --main-font-family: 'Bebas Neue', cursive;
     --regular-border-white: 1px solid #fff;
     --regular-border-black: 1px solid #000;
-    --regular-box-sizing: 'border-box';
+    --regular-box-sizing: border-box;
     --regular-white-background: #fff;
     --regular-black-background: #000;
     --regular-white-color: #fff;
@@ -61,15 +61,22 @@ Reminder:
     justify-content: space-around;
 }
 
+@mixin flex-space-around-justify-align-center() {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
 @mixin flex-justify-start-align-center() {
     display: flex;
     justify-content: flex-start;
     align-items: center;
 }
 
-@mixin fixed-background-container-props($url) {
-    width: 100vw;
-    min-width: 300px;
+@mixin background-container-setup($url) {
+    position: relative;
+    width: var(--max-viewport-width);
+    min-width: var(--min-overall-width);
     background-image: url($url);
     background-position: 50% 50%;
     background-repeat: no-repeat;
@@ -87,11 +94,11 @@ Reminder:
     min-width: 300px;
 }
 
-@mixin fixed-main-container-props {
-    z-index: 0;
+@mixin main-container-setup {
     position: relative;
-    width: var(--fixed-overall-width);
-    margin: 0 auto;
+    z-index: 0;
     padding: 0;
-    font-family: 'Bebas Neue', cursive;
+    width: var(--fixed-overall-width);
+    font-family: var(--main-font-family);
+    margin: var(--centered-margin-zero-vertical);
 }
