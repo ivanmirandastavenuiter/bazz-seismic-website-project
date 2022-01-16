@@ -18,6 +18,7 @@ Reminder:
 
 :root {
     --max-viewport-width: 100vw;
+    --max-viewport-height: 100vh;
     --min-overall-width: 300px;
     --fixed-overall-width: 1535px;
     --centered-margin-zero-vertical: 0 auto;
@@ -31,6 +32,7 @@ Reminder:
     --regular-black-color: #000;
     --regular-cursor-behaviour: pointer;
     --max-width: 100%;
+    --max-height: 100%;
     --regular-text-align: center;
 }
 
@@ -63,4 +65,33 @@ Reminder:
     display: flex;
     justify-content: flex-start;
     align-items: center;
+}
+
+@mixin fixed-background-container-props($url) {
+    width: 100vw;
+    min-width: 300px;
+    background-image: url($url);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0;
+    float: left;
+    clear: both;
+}
+
+@mixin fixed-background-container-props-for-music {
+    padding: 0;
+    float: left;
+    clear: both;
+    width: 100vw;
+    min-width: 300px;
+}
+
+@mixin fixed-main-container-props {
+    z-index: 0;
+    position: relative;
+    width: var(--fixed-overall-width);
+    margin: 0 auto;
+    padding: 0;
+    font-family: 'Bebas Neue', cursive;
 }

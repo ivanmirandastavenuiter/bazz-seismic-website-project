@@ -1,5 +1,4 @@
 @use 'src/styles.scss';
-
 :host {
     --navbar-z-index: 3;
     --on-home-sections-hover: #797168;
@@ -32,7 +31,6 @@ div.dv-lvl-2.sections-navbar {
     margin: var(--centered-margin-zero-vertical);
     font-family: var(--main-font-family);
     z-index: var(--navbar-z-index);
-
     div.dv-lvl-3.upper-left-corner-logo {
         @include styles.flex-only();
         position: absolute;
@@ -42,7 +40,6 @@ div.dv-lvl-2.sections-navbar {
         height: 40px;
         border: var(--regular-border-white);
         box-sizing: var(--regular-box-sizing);
-
         div.dv-lvl-4.left-logo {
             @include styles.flex-center-justify-and-align();
             width: 20%;
@@ -50,7 +47,6 @@ div.dv-lvl-2.sections-navbar {
             font-size: var(--main-navbar-font-size);
         }
     }
-
     div.dv-lvl-3.upper-left-corner-logo.music {
         @include styles.flex-only();
         position: absolute;
@@ -60,7 +56,6 @@ div.dv-lvl-2.sections-navbar {
         height: 40px;
         border: var(--regular-border-black);
         box-sizing: var(--regular-box-sizing);
-
         div.dv-lvl-4.left-logo.music {
             @include styles.flex-center-justify-and-align();
             width: 20%;
@@ -68,9 +63,7 @@ div.dv-lvl-2.sections-navbar {
             font-size: var(--main-navbar-font-size);
             color: var(--regular-white-color);
         }
-        
     }
-
     div.dv-lvl-3.upper-left-corner-logo.contact {
         @include styles.flex-only();
         position: absolute;
@@ -80,7 +73,6 @@ div.dv-lvl-2.sections-navbar {
         height: 40px;
         border: var(--regular-border-black);
         box-sizing: var(--regular-box-sizing);
-        
         div.dv-lvl-4.left-logo.contact {
             @include styles.flex-center-justify-and-align();
             width: 20%;
@@ -88,29 +80,23 @@ div.dv-lvl-2.sections-navbar {
             font-size: var(--main-navbar-font-size);
             color: var(--regular-white-color);
         }
-        
     }
-
     div.dv-lvl-3.sections-container {
         width: 600px;
         color: var(--regular-white-color);
-
         ul.ul-lvl-4.section-list {
             @include styles.flex-space-around-only-justify();
             list-style-type: none;
-
             li.li-lvl-5.section-list-item {
                 letter-spacing: 7px;
                 font-size: .6em;
                 transition: color .1s linear;
-
                 a {
                     color: inherit;
                     text-decoration: none;
                 }
             }
         }
-
         ul.ul-lvl-4.section-list.home {
             li.li-lvl-5.section-list-item {
                 &:hover {
@@ -118,7 +104,6 @@ div.dv-lvl-2.sections-navbar {
                 }
             }
         }
-
         ul.ul-lvl-4.section-list.gallery {
             li.li-lvl-5.section-list-item {
                 &:hover {
@@ -126,7 +111,6 @@ div.dv-lvl-2.sections-navbar {
                 }
             }
         }
-
         ul.ul-lvl-4.section-list.music {
             li.li-lvl-5.section-list-item {
                 &:hover {
@@ -134,7 +118,6 @@ div.dv-lvl-2.sections-navbar {
                 }
             }
         }
-
         ul.ul-lvl-4.section-list.contact {
             li.li-lvl-5.section-list-item {
                 &:hover {
@@ -143,22 +126,18 @@ div.dv-lvl-2.sections-navbar {
             }
         }
     }
-    
     div.dv-lvl-3.sections-container.music {
         width: 600px;
         color: var(--regular-black-color);
     }
-
     div.dv-lvl-3.social-media-container {
         width: 200px;
         color: var(--regular-white-color);
-
         ul.ul-lvl-4.social-media-list {
             @include styles.flex-justify-start-align-center();
             list-style-type: none;
             padding-inline-start: 0;
             margin-block-start: .7em;
-
             li.li-lvl-5.social-media-item {
                 font-size: 1em;
                 margin: 0 20px;
@@ -166,7 +145,6 @@ div.dv-lvl-2.sections-navbar {
                 cursor: var(--regular-cursor-behaviour);
             }
         }
-
         ul.ul-lvl-4.social-media-list.home {
             li.li-lvl-5.social-media-item {
                 &:hover {
@@ -174,7 +152,6 @@ div.dv-lvl-2.sections-navbar {
                 }
             }
         }
-
         ul.ul-lvl-4.social-media-list.gallery {
             li.li-lvl-5.social-media-item {
                 &:hover {
@@ -182,7 +159,6 @@ div.dv-lvl-2.sections-navbar {
                 }
             }
         }
-
         ul.ul-lvl-4.social-media-list.music {
             li.li-lvl-5.social-media-item {
                 &:hover {
@@ -190,7 +166,6 @@ div.dv-lvl-2.sections-navbar {
                 }
             }
         }
-
         ul.ul-lvl-4.social-media-list.contact {
             li.li-lvl-5.social-media-item {
                 &:hover {
@@ -199,11 +174,9 @@ div.dv-lvl-2.sections-navbar {
             }
         }
     }
-
     div.dv-lvl-3.social-media-container.music {
         width: 200px;
         color: var(--regular-black-color);
-    
     }
 }
 
@@ -214,46 +187,38 @@ div.dv-lvl-2.sections-navbar {
         flex-flow: var(--navbar-flex-flow-on-responsive);
         margin: var(--centered-margin-zero-vertical);
         z-index: var(--navbar-z-index);
-
         div.dv-lvl-3.upper-left-corner-logo,
         div.dv-lvl-3.upper-left-corner-logo.contact,
         div.dv-lvl-3.upper-left-corner-logo.music {
             position: static;
             margin: var(--centered-margin-on-responsive);
         }
-
         div.dv-lvl-3.sections-container,
         div.dv-lvl-3.sections-container.music {
             position: static;
             margin: var(--centered-margin-zero-vertical);
             width: var(--max-width);
-
             ul.ul-lvl-4.section-list {
                 flex-flow: var(--navbar-flex-flow-on-responsive);
                 text-align: var(--regular-text-align);
                 padding-inline-start: 0;
-
                 li.li-lvl-5.section-list-item {
                     margin: 10px;
                     padding-left: 7px;
                 }
             }
         }
-
         div.dv-lvl-3.social-media-container {
             margin: var(--centered-margin-zero-vertical);
-
             ul.ul-lvl-4.social-media-list {
                 flex-flow: var(--navbar-flex-flow-on-responsive);
                 justify-content: center;
-
                 li.li-lvl-5.social-media-item {
                     margin: var(--social-media-margin-on-responsive);
                 }
             }
         }
     }
-
     div.dv-lvl-2.sections-navbar.music {
         flex-flow: var(--navbar-flex-flow-on-responsive);
         margin: var(--centered-margin-zero-vertical);

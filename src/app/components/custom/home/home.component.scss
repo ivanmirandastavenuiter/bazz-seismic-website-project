@@ -1,45 +1,37 @@
+@use 'src/styles.scss';
+:host {
+    --home-background-container-z-index: -2;
+    --home-blur-layer-z-index: -1;
+    --home-main-font-size: 1.3em;
+}
+
 div.dv-lvl-0.background-container {
+    @include styles.fixed-background-container-props('/assets/imgs/concert.jpg');
     position: relative;
-    z-index: -2;
-    height: 100vh;
-    width: 100vw;
-    min-width: 300px;
-    background-image: url('/assets/imgs/concert.jpg');
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 0;
-    float: left;
-    clear: both;
-}
-
-div.dv-lvl-1.main-container {
-    z-index: 0;
-    position: relative;
-    width: 1535px;
-    min-width: 300px;
-    height: 100%;
-    margin: 0 auto;
-    padding: 0;
-    font-family: 'Bebas Neue', cursive;
-}
-
-div.dv-lvl-2.blur-layer {
-    position: absolute;
-    top: 0;
-    margin: 0 auto;
-    z-index: -1;
-    width: 40%;
-    min-width: 250px;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(9px);
+    z-index: var(--home-background-container-z-index);
+    height: var(--max-viewport-height);
+    div.dv-lvl-1.main-container {
+        @include styles.fixed-main-container-props();
+        min-width: var(--min-overall-width);
+        height: var(--max-height);
+        div.dv-lvl-2.blur-layer {
+            position: absolute;
+            top: 0;
+            width: 40%;
+            min-width: 250px;
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(9px);
+            margin: var(--centered-margin-zero-vertical);
+            z-index: var(--home-blur-layer-z-index);
+            height: var(--max-width);
+        }
+    }
 }
 
 p.par-lvl-3.bass-paragraph {
+    position: relative;
     margin: 0;
     padding: 0;
-    position: relative;
     top: 123px;
     left: 423px;
     background-image: url('/assets/imgs/concert.jpg');
@@ -54,41 +46,39 @@ p.par-lvl-3.bass-paragraph {
 }
 
 p.par-lvl-3.seismic-paragraph {
+    position: relative;
     top: 67px;
     left: 617px;
     margin: 0;
     padding: 0;
-    position: relative;
-    color: #fff;
     font-size: 4.5em;
+    color: var(--regular-white-color);
 }
 
 div.dv-lvl-2.presentation-card {
+    @include styles.flex-only();
+    position: absolute;
     width: 500px;
     height: 300px;
-    border: 1px solid #fff;
-    box-sizing: border-box;
-    position: absolute;
     bottom: 70px;
     left: 70px;
-    display: flex;
     margin-bottom: -1px;
+    border: var(--regular-border-white);
+    box-sizing: var(--regular-box-sizing);
 }
 
 div.dv-lvl-3.card-index {
     width: 15%;
-    border-right: 1px solid #fff;
-    box-sizing: border-box;
+    border-right: var(--regular-border-white);
+    box-sizing: var(--regular-box-sizing);
 }
 
 div.dv-lvl-4.card-index-number {
+    @include styles.flex-center-justify-and-align();
     height: 50px;
-    width: 100%;
-    background: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.3em;
+    width: var(--max-width);
+    background: var(--regular-white-background);
+    font-size: var(--home-main-font-size);
 }
 
 div.dv-lvl-3.card-content {
@@ -111,11 +101,11 @@ p.par-lvl-4.card-text {
         background-attachment: fixed;
         float: left;
         clear: both;
-    }
-    div.dv-lvl-1.main-container {
-        width: 100vw;
-        height: 100%;
-        margin: 420px auto 0 auto;
+        div.dv-lvl-1.main-container {
+            margin: 420px auto 0 auto;
+            width: var(--max-viewport-width);
+            height: var(--max-height);
+        }
     }
     div.dv-lvl-2.blur-layer {
         position: static;
@@ -124,7 +114,7 @@ p.par-lvl-4.card-text {
     p.par-lvl-3.bass-paragraph,
     p.par-lvl-3.seismic-paragraph {
         position: static;
-        text-align: center;
+        text-align: var(--regular-text-align);
     }
     div.dv-lvl-2.presentation-card {
         position: static;
@@ -151,15 +141,15 @@ p.par-lvl-4.card-text {
         height: auto;
     }
     div.dv-lvl-3.card-index {
-        background: #fff;
-        display: flex;
-        margin: 0 auto;
+        @include styles.flex-only();
+        background: var(--regular-white-background);
+        margin: var(--centered-margin-zero-vertical);
     }
     div.dv-lvl-3.card-content {
-        margin: 0 auto;
+        margin: var(--centered-margin-zero-vertical);
     }
     h1.he-lvl-4.card-header {
-        text-align: center;
+        text-align: var(--regular-text-align);
     }
 }
 
@@ -171,7 +161,7 @@ p.par-lvl-4.card-text {
 
 @media screen and (max-width: 476px) and (min-height: 1400px) {
     div.dv-lvl-0.background-container.home {
-        height: 100vh;
+        height: var(--max-viewport-height);
     }
     div.dv-lvl-1.main-container {
         height: auto;
