@@ -1,5 +1,4 @@
 @use 'src/styles.scss';
-
 :host {
     --upper-gap-height: 420px;
     --sign-font-size: 3em;
@@ -7,13 +6,11 @@
 
 div.dv-lvl-0.background-container {
     @include styles.background-container-setup('assets/imgs/mixer.jpg');
-
     div.dv-lvl-1.main-container {
         @include styles.main-container-setup();
         min-width: 150px;
         height: var(--max-height);
         margin: var(--centered-margin-zero-vertical);
-
         div.dv-lvl-2.main-container.dark-overlay {
             position: absolute;
             top: 0;
@@ -26,34 +23,27 @@ div.dv-lvl-0.background-container {
             width: var(--max-width);
             height: var(--max-height);
         }
-
         div.dv-lvl-2.main-container.dark-overlay.show {
             display: block;
         }
-
         div.dv-lvl-2.gallery-main-container {
             @include styles.flex-only();
             width: 90%;
             padding-bottom: 6.3em;
-
             div.dv-lvl-3.gallery-sign {
                 @include styles.flex-only();
                 width: 10%;
                 flex-flow: column-reverse;
                 margin: 50px auto;
-
                 div.dv-lvl-4.sign-index-container {
                     @include styles.flex-center-justify-and-align();
                     height: 20%;
                     background: var(--regular-white-background);
-
                     span.sp-lvl-5.sign-index {
                         transform: rotate(270deg);
                         font-size: 3em;
                     }
-                    
                 }
-
                 p.par-lvl-4.sign-letters {
                     @include styles.flex-center-justify-and-align();
                     height: 80%;
@@ -66,7 +56,6 @@ div.dv-lvl-0.background-container {
                     text-align: var(--regular-text-align);
                 }
             }
-
             div.dv-lvl-3.gallery-container {
                 width: 90%;
                 margin: 110px auto 50px auto;
@@ -74,22 +63,18 @@ div.dv-lvl-0.background-container {
                 backdrop-filter: blur(9px);
                 box-sizing: var(--regular-box-sizing);
                 border: var(--regular-border-white);
-
                 div.dv-lvl-4.gallery-row {
                     @include styles.flex-only();
                     flex-wrap: wrap;
                     padding: 0 4px;
                     box-sizing: var(--regular-box-sizing);
-
                     div.dv-lvl-5.gallery-column {
                         flex: 25%;
                         max-width: 25%;
                         padding: 0 4px;
                         box-sizing: var(--regular-box-sizing);
-
                         div.dv-lvl-5.img-box {
                             position: relative;
-
                             div.dv-lvl-6.img-hover-cover {
                                 position: absolute;
                                 top: 0;
@@ -101,12 +86,10 @@ div.dv-lvl-0.background-container {
                                 width: var(--max-width);
                                 height: var(--max-height);
                                 color: var(--regular-white-color);
-
                                 &:hover {
                                     opacity: 1;
                                 }
                             }
-                            
                             img.img-lvl-6.gallery-image {
                                 z-index: 1;
                                 margin-top: 8px;
@@ -115,15 +98,10 @@ div.dv-lvl-0.background-container {
                                 box-sizing: var(--regular-box-sizing);
                                 cursor: var(--regular-cursor-behaviour);
                             }
-                            
-
                         }
                     }
-
                 }
-                
             }
-
             div.dv-lvl-3.hidden-zoomed-image-container {
                 position: fixed;
                 left: 0;
@@ -140,23 +118,20 @@ div.dv-lvl-0.background-container {
                 scrollbar-color: #000 #fff;
                 scrollbar-width: thin;
                 background: rgba(236, 236, 236, 0.3);
-                backdrop-filter: blur(9px);
+                -moz-backdrop-filter: blur(9px);
                 transition: display 0.2s;
                 display: none;
                 border: var(--regular-border-white);
-
                 img.img-lvl-4.image-zommed-panel {
                     width: 75%;
                     margin: 8px auto;
                     box-sizing: var(--regular-box-sizing);
                     display: block;
                 }
-
                 div.dv-lvl-4.cross-box-container {
                     position: absolute;
                     top: 25px;
                     right: 25px;
-
                     div.dv-lvl-5.cross-box {
                         @include styles.flex-center-justify-and-align();
                         position: sticky;
@@ -168,23 +143,16 @@ div.dv-lvl-0.background-container {
                         cursor: var(--regular-cursor-behaviour);
                         color: var(--regular-white-color);
                     }
-
                 }
-                
             }
-
             div.dv-lvl-3.hidden-zoomed-image-container.show-with-flex {
                 @include styles.flex-center-justify-and-align();
             }
-            
             div.dv-lvl-3.hidden-zoomed-image-container.show-with-block {
                 display: block;
             }
-
         }
-
     }
-
     div.dv-lvl-1.main-container.dark-overlay-upper-gap {
         position: absolute;
         top: calc(var(--upper-gap-height) * -1);
@@ -193,15 +161,12 @@ div.dv-lvl-0.background-container {
         display: none;
         z-index: 3;
     }
-
     div.dv-lvl-1.main-container.dark-overlay-upper-gap.show {
         display: block;
     }
-    
     div.dv-lvl-1.main-container.overlap-on-footer {
         z-index: 4;
     }
-    
 }
 
 @media screen and (max-width: 1534px),
@@ -240,7 +205,6 @@ div.dv-lvl-0.background-container {
             }
         }
     }
-
 }
 
 @media screen and (max-width: 1200px) {
@@ -353,7 +317,7 @@ div.dv-lvl-0.background-container {
                         letter-spacing: 20px;
                         padding-left: 25px;
                     }
-                }               
+                }
                 div.dv-lvl-3.hidden-zoomed-image-container {
                     height: 45%;
                 }
@@ -377,8 +341,11 @@ div.dv-lvl-0.background-container {
     }
 }
 
-@media screen and (max-width: 476px) and (min-height: 1400px) {
+@media screen and (max-width: 1550px) and (min-height: 1400px) {
     div.dv-lvl-0.background-container.gallery {
-        height: auto;
+        height: var(--max-height);
+        div.dv-lvl-1.main-container {
+            height: auto;
+        }
     }
 }
