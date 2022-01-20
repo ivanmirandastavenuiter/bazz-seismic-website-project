@@ -289,9 +289,12 @@ div.dv-lvl-0.background-container {
     }
 }
 
-@media screen and (min-height: 1050px) {
+@media screen and (min-width: 500px) and (min-height: 1050px) {
     div.dv-lvl-0.background-container {
-        height: var(--max-viewport-height);
+        height: auto;
+        div.dv-lvl-1.main-container {
+            height: 100vh;
+        }
     }
 }
 

@@ -1,5 +1,4 @@
 @use 'src/styles.scss';
-
 :host {
     --fixed-border-decorator-width: 1px;
     --fixed-border-decorator-height: 1px;
@@ -44,10 +43,8 @@ div.dv-lvl-2.footer-container {
     margin-bottom: 1.3em;
     width: var(--fixed-overall-width);
     font-family: var(--main-font-family);
-
     div.dv-lvl-2.bass-sign-container {
         width: 100px;
-
         div.dv-lvl-4.bass-sign-border {
             position: relative;
             top: 18px;
@@ -56,57 +53,48 @@ div.dv-lvl-2.footer-container {
             height: var(--fixed-border-decorator-height);
             background: var(--regular-white-background);
         }
-
         p.par-lvl-3.bass-letters {
             font-size: .7em;
             letter-spacing: 7px;
             color: var(--regular-white-color);
         }
     }
-
     div.dv-lvl-2.switch-section-buttons {
         @include styles.flex-center-justify-and-align();
         position: static;
         width: 200px;
-        
         div.dv-lvl-3.button-left,
         div.dv-lvl-3.button-right {
             @include fixed-button-values();
             background: #f4eee4;
         }
-
     }
-
     div.dv-lvl-2.switch-section-buttons.gallery {
         div.dv-lvl-3.button-left,
         div.dv-lvl-3.button-right {
             @include gallery-colors();
         }
     }
-
     div.dv-lvl-2.switch-section-buttons.music {
         div.dv-lvl-3.button-left,
         div.dv-lvl-3.button-right {
             @include music-colors();
         }
     }
-
     div.dv-lvl-2.switch-section-buttons.contact {
         div.dv-lvl-3.button-left,
         div.dv-lvl-3.button-right {
             @include contact-colors();
         }
     }
-
     div.dv-lvl-2.seismic-sign-container {
         p.par-lvl-3.seismic-letters {
             font-size: .7em;
             letter-spacing: 7px;
             color: var(--regular-white-color);
         }
-
         div.dv-lvl-4.seismic-sign-border {
-            position: relative; 
+            position: relative;
             top: 18px;
             right: 17px;
             width: 100px;
@@ -184,7 +172,7 @@ div.dv-lvl-2.footer-container.music {
     }
 }
 
-@media screen and (min-height: 1200px) {
+@media screen and (min-width: 900px) and (min-height: 1200px) {
     div.dv-lvl-2.footer-container {
         div.dv-lvl-2.switch-section-buttons {
             position: absolute;
