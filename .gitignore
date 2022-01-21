@@ -52,3 +52,6 @@ Thumbs.db
 
 # Tracks
 /src/assets/tracks
+
+# Autoprefixer output
+build
