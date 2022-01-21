@@ -50,10 +50,6 @@ export class MusicComponent implements OnInit {
   onPlaybackReady() {
     // ...
   }
-  
-  // customResolver = (iconName: string) => {
-  //   return `assets/${iconName}.svg`;
-  // }
 
   async onPreviousClick() {
     if (this.songPlayed === 0) {
