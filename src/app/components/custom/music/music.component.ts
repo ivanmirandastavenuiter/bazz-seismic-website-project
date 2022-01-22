@@ -16,29 +16,26 @@ export class MusicComponent implements OnInit {
   title: string = 'Music';
   songPlayed: number = 0;
   songs: any = {
-    // 0: 'assets/tracks/2pac-changes.mp3',
-    // 1: 'assets/tracks/lp-papercut.mp3',
-    // 2: 'assets/tracks/lp-intheend.mp3'
     0: {
-      artist: '2pac',
-      title: 'Changes',
-      songUrl: 'assets/tracks/2pac-changes.mp3',
+      artist: 'Tester',
+      title: 'Test OnE',
+      songUrl: 'assets/tracks/test-one.aac',
       imageUrl: 'assets/imgs/song-background.jpg',
-      album: 'Greatest Hits'
+      album: 'Testest Hits'
     },
     1: {
-      artist: 'Linkin Park',
-      title: 'Papercut',
-      songUrl: 'assets/tracks/lp-papercut.mp3',
+      artist: 'Tester',
+      title: 'Test tWo',
+      songUrl: 'assets/tracks/test-two.aac',
       imageUrl: 'assets/imgs/hey-1.jpg',
-      album: 'Hybrid theory'
+      album: 'Testest Hits'
     },
     2: {
-      artist: 'Linkin Park',
-      title: 'In The End',
-      songUrl: 'assets/tracks/lp-intheend.mp3',
+      artist: 'Tester',
+      title: 'EHH VOL.2',
+      songUrl: 'assets/tracks/test-three.aac',
       imageUrl: 'assets/imgs/hey-2.jpg',
-      album: 'Hybrid theory'
+      album: 'Testest Hits'
     }
   }
 

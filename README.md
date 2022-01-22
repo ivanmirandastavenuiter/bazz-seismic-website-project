@@ -15,5 +15,6 @@
 **-> Last update [29-12]:** Dockerfile and nginx conf files added for deployment handling / Routing problem solved at nginx deployment with docker / Fixes at switching buttons / Favicon added /  Extremely sensuality <3  
 **-> Last update [14-01-22]:** Extreme sensuality vol.2 - SCSS half implemented. Very nice in the morning  
 **-> Last update [21-01-22]:** Extreme sensuality vol.3 - SCSS done. Nightmare finished. Possibly last update :(  
+**-> Last update (really) [22-01-22]:** Extreme sensuality vol.4 - Bug style fixed on gallery section. Tracks removed to avoid issues with copyright.   
 
 💣:lipstick::high_heel:
