@@ -59,7 +59,7 @@
 
 | Tool               | Go                                      | 
 | ------------------ | --------------------------------------- | 
-| Angular            | Text editor                             | 
+| Angular            | [![Angular](https://github.com/ivanmirandastavenuiter/bazz-seismic-website-project/blob/master/docs/tooling/vimeplayer.png|width=100px)](https://github.com/ArmynC)                             | 
 | Vime player        | File manager                            | 
 | Npm                | File manager                            | 
 | Autoprefixer       | File manager                            | 
