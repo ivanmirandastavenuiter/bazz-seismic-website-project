@@ -42,19 +42,38 @@
 </p>
 
 ### Introduction
+---
+` [ 📰 ] `
 
-📰
+<p>A website done for artist <b>Bass Seismic</b>. Made with <b>angular</b>. No need for server side implementation.</p>
+<p>Nicest features:</p>
+
+- <b>4 sections: Home, Gallery, Music, Contact</b>
+- Music player
+- Responsive <b>full design</b>
+- Strong usage of absolute / relative positioning to achieve style requirements
 
 ### Tooling
+---
+` [ 🔧 ] `
 
-🔧 
-
+| Tool               | Go                                      | 
+| ------------------ | --------------------------------------- | 
+| Angular            | Text editor                             | 
+| Vime player        | File manager                            | 
+| Npm                | File manager                            | 
+| Autoprefixer       | File manager                            | 
+| Heroku             | File manager                            | 
+| Docker             | File manager                            | 
+| SCSS               | File manager                            | 
+ 
 ### Credits
-
-👷
+---
+` [ 👷 ] `
 
 ### License
+---
+` [ ❗ ] `
 
-❗
 
 
