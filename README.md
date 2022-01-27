@@ -97,7 +97,7 @@ fkdlgjfkldjgf
 <br>
 <br>
 <br>
-## 👷 Credits
+## Credits
 
 fkdlgjfkldjgf
 fkdlgjfkldjgf
