@@ -35,7 +35,7 @@
 </p>
 
 <p align="center">
-  <a href="##introduction">Introduction</a> •
+  <a href="#Introduction">Introduction</a> •
   <a href="#tooling">Tooling</a> •
   <a href="#credits">Credits</a> •
   <a href="#license">License</a>
