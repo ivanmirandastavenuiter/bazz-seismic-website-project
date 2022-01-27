@@ -37,124 +37,24 @@
 <p align="center">
   <a href="#introduction">Introduction</a> •
   <a href="#tooling">Tooling</a> •
-  <a href="#credits">�Credits</a> •
+  <a href="#credits">Credits</a> •
   <a href="#license">License</a>
 </p>
 
-## 📰 Introduction
+### Introduction
 
-fkdlgjfkldjgf
-fkdlgjfkldjgf
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-fkdlgjfkldjgf
-fkdlgjfkldjgf
-fkdlgjfkldjgf
-fkdlgjfkldjgf
-fkdlgjfkldjgf
-fkdlgjfkldjgf
-fkdlgjfkldjgf
-fkdlgjfkldjgf
-fkdlgjfkldjgf
-fkdlgjfkldjgf
-fkdlgjfkldjgf
+📰
 
-## 🔧 Tooling
+### Tooling
 
-fkdlgjfkldjgf
-fkdlgjfkldjgf
-fkdlgjfkldjgf
-fkdlgjfkldjgf
-fkdlgjfkldjgf
-fkdlgjfkldjgf
-fkdlgjfkldjgf
-fkdlgjfkldjgf
-fkdlgjfkldjgf
-fkdlgjfkldjgf
-fkdlgjfkldjgf
-fkdlgjfkldjgf
-fkdlgjfkldjgf
-fkdlgjfkldjgf
-fkdlgjfkldjgf
-fkdlgjfkldjgf
-fkdlgjfkldjgf
-fkdlgjfkldjgf
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-## Credits \ 👷
+🔧 
 
-fkdlgjfkldjgf
-fkdlgjfkldjgf
-fkdlgjfkldjgf
-fkdlgjfkldjgf
-fkdlgjfkldjgf
-fkdlgjfkldjgf
-fkdlgjfkldjgf
-fkdlgjfkldjgf
-fkdlgjfkldjgf<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+### Credits
 
-fkdlgjfkldjgf
-fkdlgjfkldjgf
+👷
 
-## ❗ License
+### License
 
-fkdlgjfkldjgf
-fkdlgjfkldjgf
-fkdlgjfkldjgf
-fkdlgjfkldjgf
-fkdlgjfkldjgf
-fkdlgjfkldjgf
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-fkdlgjfkldjgf
-fkdlgjfkldjgf
-fkdlgjfkldjgf
-fkdlgjfkldjgf
-fkdlgjfkldjgf
-fkdlgjfkldjgf
-fkdlgjfkldjgf
-fkdlgjfkldjgf
-fkdlgjfkldjgf
-fkdlgjfkldjgf
-fkdlgjfkldjgf
-fkdlgjfkldjgf
+❗
 
-![screenshot](https://raw.githubusercontent.com/amitmerchant1990/electron-markdownify/master/app/img/markdownify.gif)
-
-## Key Features
 
