@@ -15,7 +15,8 @@
 <p align="center">
   The repo for official website of Bass Seismic. He is an artist from Málaga and actually, pretty cool. You <b>should check it</b>.
   <br>
-  It has nothing special. Nope! It's a joke. It's <b>quite nice, beautiful and functional</b>.
+  It has nothing special. Nope! It's a joke. It's <b>quite nice, beautiful and functional</b>.<br><br>
+  Current status is a <b>placeholder</b>, which means that a few aspects are temporary and will change. Like, for example, color palettes, images, audios and similar.
 </p>
 
 <p align="center">
