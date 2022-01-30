@@ -57,23 +57,102 @@
 ---
 ` [ 🔧 ] `
 
-| Tool               | Go                                      | 
-| ------------------ | --------------------------------------- | 
-| Angular            | [![Angular](https://github.com/ivanmirandastavenuiter/bazz-seismic-website-project/blob/master/docs/tooling/vimeplayer.png|width=100px)](https://github.com/ArmynC)                             | 
-| Vime player        | File manager                            | 
-| Npm                | File manager                            | 
-| Autoprefixer       | File manager                            | 
-| Heroku             | File manager                            | 
-| Docker             | File manager                            | 
-| SCSS               | File manager                            | 
+<table>
+    <th>Tool</th>
+    <th>Go</th>
+    <tr>
+        <td>Angular   </td>
+        <td>
+          <a href="https://angular.io/" target="_blank">
+            <img alt="angular" src="https://github.com/ivanmirandastavenuiter/bazz-seismic-website-project/blob/master/docs/tooling/angular.svg" height=130 width=130 />
+          </a>
+        </td>
+    </tr>
+    <tr>
+        <td>Vime Player   </td>
+        <td>
+          <a href="https://vimejs.com/" target="_blank">
+            <img alt="vimeplayer" src="https://github.com/ivanmirandastavenuiter/bazz-seismic-website-project/blob/master/docs/tooling/vimeplayer.svg" height=130 width=130 />
+          </a>
+        </td>
+    </tr>
+    <tr>
+        <td>Npm   </td>
+        <td>
+          <a href="https://www.npmjs.com/" target="_blank">
+             <img alt="npm" src="https://github.com/ivanmirandastavenuiter/bazz-seismic-website-project/blob/master/docs/tooling/npm.svg" width=130 />
+          </a> 
+        </td>
+    </tr>
+    <tr>
+        <td>Autoprefixer   </td>
+        <td>
+          <a href="https://github.com/postcss/autoprefixer#readme" target="_blank">
+              <img alt="autoprefixer" src="https://github.com/ivanmirandastavenuiter/bazz-seismic-website-project/blob/master/docs/tooling/autoprefixer.svg" height=100 width=130 />
+          </a>
+        </td>
+    </tr>
+    <tr>
+        <td>Heroku   </td>
+        <td>
+            <a href="https://id.heroku.com/login" target="_blank">
+              <img alt="heroku" src="https://github.com/ivanmirandastavenuiter/bazz-seismic-website-project/blob/master/docs/tooling/heroku.svg" height=130 width=130 />
+            </a>
+        </td>
+    </tr>
+    <tr>
+        <td>Docker   </td>
+        <td>
+          <a href="https://www.docker.com/" target="_blank">
+            <img alt="docker" src="https://github.com/ivanmirandastavenuiter/bazz-seismic-website-project/blob/master/docs/tooling/docker.svg" height=130 width=130 />
+          </a>
+        </td>
+    </tr>
+    <tr>
+        <td>SCSS   </td>
+        <td>
+          <a href="https://sass-lang.com/" target="_blank">
+              <img alt="scss" src="https://github.com/ivanmirandastavenuiter/bazz-seismic-website-project/blob/master/docs/tooling/sass.svg" height=130 width=130 />
+          </a>
+        </td>
+    </tr>
+</table>
  
 ### Credits
 ---
 ` [ 👷 ] `
 
+I owe - a lot - to **pinterest artists**, especially in regards to design. I took the inspiration from the following ones:
+
+
+| Artist              | Source design                           | 
+| ------------------  | --------------------------------------- | 
+| [Наталья Тузовская] | [music-design]                          | 
+| [Mellene Templates] | [contact-design]                        | 
+| [???]               | [home-design]                           | 
+| [Dribbble]          | [home-design-2]                         | 
+| [Nick Nyxson]       | [home-design-3]                         | 
+
 ### License
 ---
 ` [ ❗ ] `
 
+MKNA Devs ©
 
+---
+
+> mkna devs &nbsp;&middot;&nbsp;
+> GitHub [@ivanmirandastavenuiter](https://github.com/ivanmirandastavenuiter) &nbsp;&middot;&nbsp;
+> Twitter [@im_stavenuiter](https://twitter.com/im_stavenuiter)
+
+[home-design]: https://pin.it/5YNPgNJ
+[home-design-2]: https://pin.it/5oucGaU
+[home-design-3]: https://pin.it/5PNNSX3
+[music-design]: https://pin.it/xYLMwgc
+[contact-design]: https://pin.it/6EAfwQw
+[Наталья Тузовская]: https://www.pinterest.es/ladynata0030/_saved/
+[Mellene Templates]: https://www.pinterest.es/MelleneTemplates/_created/
+[???]: https://prnt.sc/
+[Dribbble]: https://www.pinterest.es/Pinner13145726/_created/
+[Nick Nyxson]: https://www.pinterest.es/NickNyxson/_created/
 
