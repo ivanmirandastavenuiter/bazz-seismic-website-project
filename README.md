@@ -57,6 +57,8 @@
 - Strong usage of absolute / relative positioning to achieve style requirements
 
 ### Links
+---
+` [ 👇 ] `
 
 Application is **temporarily deployed at heroku**. In the future, hosting will be private. 
 
@@ -129,6 +131,8 @@ Give it a look here:
 </table>
 
 ### Run it 
+---
+` [ 🏃 ] `
 
 You can run the application with the classic `npm run start`. 
 
