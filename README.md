@@ -37,8 +37,8 @@
 
 <p align="center">
   <a href="#introduction">Introduction</a> •
-  <a href="#tooling">Tooling</a> •
   <a href="#credits">Links</a> •
+  <a href="#tooling">Tooling</a> •
   <a href="#credits">Run it</a> •
   <a href="#credits">Credits</a> •
   <a href="#license">License</a>
@@ -55,6 +55,13 @@
 - Music player
 - Responsive <b>full design</b>
 - Strong usage of absolute / relative positioning to achieve style requirements
+
+### Links
+
+Application is **temporarily deployed at heroku**. In the future, hosting will be private. 
+
+Give it a look here:
+* https://bass-seismic.herokuapp.com/
 
 ### Tooling
 ---
@@ -120,7 +127,44 @@
         </td>
     </tr>
 </table>
- 
+
+### Run it 
+
+You can run the application with the classic `npm run start`. 
+
+Application is **containerized with docker** and an out-of-the-box **nginx server**. Configuration is really simple.
+
+```yml
+FROM node:16.0.0-alpine as node
+
+WORKDIR /usr/src/bass-app
+
+COPY package*.json ./
+
+RUN npm install
+
+COPY . .
+
+RUN npm run build
+
+# Stage 2
+FROM nginx
+
+COPY ./nginx.conf /etc/nginx/conf.d/default.conf
+
+RUN rm -rf /usr/share/nginx/html/* 
+
+COPY --from=node /usr/src/bass-app/dist/bass-seismic-angular /usr/share/nginx/html
+
+ENV PORT=${PORT:-4200}
+
+CMD sed -i -e 's/$PORT/'"$PORT"'/g' /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'
+```
+
+Extra stuff:
+
+- Run `npm run autoprefixer` to set automatic vendor prefixes into your css. This is reaaally **cool** (set .browserslistrc to `last 4 version`. This ensures higher compatibility with all browsers)
+
 ### Credits
 ---
 ` [ 👷 ] `
