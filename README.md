@@ -15,7 +15,8 @@
 <p align="center">
   The repo for official website of Bass Seismic. He is an artist from Málaga and actually, pretty cool. You <b>should check it</b>.
   <br>
-  It has nothing special. Nope! It's a joke. It's <b>quite nice, beautiful and functional</b>.
+  It has nothing special. Nope! It's a joke. It's <b>quite nice, beautiful and functional</b>.<br><br>
+  Current status is a <b>placeholder</b>, which means that a few aspects are temporary and will change. Like, for example, color palettes, images, audios and similar.
 </p>
 
 <p align="center">
@@ -36,7 +37,9 @@
 
 <p align="center">
   <a href="#introduction">Introduction</a> •
+  <a href="#links">Links</a> •
   <a href="#tooling">Tooling</a> •
+  <a href="#run-it">Run it</a> •
   <a href="#credits">Credits</a> •
   <a href="#license">License</a>
 </p>
@@ -53,27 +56,154 @@
 - Responsive <b>full design</b>
 - Strong usage of absolute / relative positioning to achieve style requirements
 
+### Links
+---
+` [ 👇 ] `
+
+Application is **temporarily deployed at heroku**. In the future, hosting will be private. 
+
+Give it a look here:
+* https://bass-seismic.herokuapp.com/
+
 ### Tooling
 ---
 ` [ 🔧 ] `
 
-| Tool               | Go                                      | 
-| ------------------ | --------------------------------------- | 
-| Angular            | Text editor                             | 
-| Vime player        | File manager                            | 
-| Npm                | File manager                            | 
-| Autoprefixer       | File manager                            | 
-| Heroku             | File manager                            | 
-| Docker             | File manager                            | 
-| SCSS               | File manager                            | 
- 
+<table>
+    <th>Tool</th>
+    <th>Go</th>
+    <tr>
+        <td>Angular   </td>
+        <td>
+          <a href="https://angular.io/" target="_blank">
+            <img alt="angular" src="https://github.com/ivanmirandastavenuiter/bazz-seismic-website-project/blob/master/docs/tooling/angular.svg" height=130 width=130 />
+          </a>
+        </td>
+    </tr>
+    <tr>
+        <td>Vime Player   </td>
+        <td>
+          <a href="https://vimejs.com/" target="_blank">
+            <img alt="vimeplayer" src="https://github.com/ivanmirandastavenuiter/bazz-seismic-website-project/blob/master/docs/tooling/vimeplayer.svg" height=130 width=130 />
+          </a>
+        </td>
+    </tr>
+    <tr>
+        <td>Npm   </td>
+        <td>
+          <a href="https://www.npmjs.com/" target="_blank">
+             <img alt="npm" src="https://github.com/ivanmirandastavenuiter/bazz-seismic-website-project/blob/master/docs/tooling/npm.svg" width=130 />
+          </a> 
+        </td>
+    </tr>
+    <tr>
+        <td>Autoprefixer   </td>
+        <td>
+          <a href="https://github.com/postcss/autoprefixer#readme" target="_blank">
+              <img alt="autoprefixer" src="https://github.com/ivanmirandastavenuiter/bazz-seismic-website-project/blob/master/docs/tooling/autoprefixer.svg" height=100 width=130 />
+          </a>
+        </td>
+    </tr>
+    <tr>
+        <td>Heroku   </td>
+        <td>
+            <a href="https://id.heroku.com/login" target="_blank">
+              <img alt="heroku" src="https://github.com/ivanmirandastavenuiter/bazz-seismic-website-project/blob/master/docs/tooling/heroku.svg" height=130 width=130 />
+            </a>
+        </td>
+    </tr>
+    <tr>
+        <td>Docker   </td>
+        <td>
+          <a href="https://www.docker.com/" target="_blank">
+            <img alt="docker" src="https://github.com/ivanmirandastavenuiter/bazz-seismic-website-project/blob/master/docs/tooling/docker.svg" height=130 width=130 />
+          </a>
+        </td>
+    </tr>
+    <tr>
+        <td>SCSS   </td>
+        <td>
+          <a href="https://sass-lang.com/" target="_blank">
+              <img alt="scss" src="https://github.com/ivanmirandastavenuiter/bazz-seismic-website-project/blob/master/docs/tooling/sass.svg" height=130 width=130 />
+          </a>
+        </td>
+    </tr>
+</table>
+
+### Run it 
+---
+` [ 🏃 ] `
+
+You can run the application with the classic `npm run start`. 
+
+Application is **containerized with docker** and an out-of-the-box **nginx server**. Configuration is really simple.
+
+```yml
+FROM node:16.0.0-alpine as node
+
+WORKDIR /usr/src/bass-app
+
+COPY package*.json ./
+
+RUN npm install
+
+COPY . .
+
+RUN npm run build
+
+# Stage 2
+FROM nginx
+
+COPY ./nginx.conf /etc/nginx/conf.d/default.conf
+
+RUN rm -rf /usr/share/nginx/html/* 
+
+COPY --from=node /usr/src/bass-app/dist/bass-seismic-angular /usr/share/nginx/html
+
+ENV PORT=${PORT:-4200}
+
+CMD sed -i -e 's/$PORT/'"$PORT"'/g' /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'
+```
+
+Extra stuff:
+
+- Run `npm run autoprefixer` to set automatic vendor prefixes into your css. This is reaaally **cool** (set .browserslistrc to `last 4 version`. This ensures higher compatibility with all browsers)
+
 ### Credits
 ---
 ` [ 👷 ] `
+
+I owe - a lot - to **pinterest artists**, especially in regards to design. I took the inspiration from the following ones:
+
+
+| Artist              | Source design                           | 
+| ------------------  | --------------------------------------- | 
+| [Наталья Тузовская] | [music-design]                          | 
+| [Mellene Templates] | [contact-design]                        | 
+| [???]               | [home-design]                           | 
+| [Dribbble]          | [home-design-2]                         | 
+| [Nick Nyxson]       | [home-design-3]                         | 
 
 ### License
 ---
 ` [ ❗ ] `
 
+MKNA Devs ©
 
+---
+
+> mkna devs &nbsp;&middot;&nbsp;
+> GitHub [@ivanmirandastavenuiter](https://github.com/ivanmirandastavenuiter) &nbsp;&middot;&nbsp;
+> Twitter [@im_stavenuiter](https://twitter.com/im_stavenuiter)
+
+[home-design]: https://pin.it/5YNPgNJ
+[home-design-2]: https://pin.it/5oucGaU
+[home-design-3]: https://pin.it/5PNNSX3
+[music-design]: https://pin.it/xYLMwgc
+[contact-design]: https://pin.it/6EAfwQw
+[Наталья Тузовская]: https://www.pinterest.es/ladynata0030/_saved/
+[Mellene Templates]: https://www.pinterest.es/MelleneTemplates/_created/
+[???]: https://prnt.sc/
+[Dribbble]: https://www.pinterest.es/Pinner13145726/_created/
+[Nick Nyxson]: https://www.pinterest.es/NickNyxson/_created/
 
